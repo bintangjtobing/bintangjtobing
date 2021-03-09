@@ -1,16 +1,14 @@
-### Hi there 👋
+# 🤠 Hi there, I'm [Bintang](https://bintangtobing.com). You can call me like "bin"?
 
-<!--
-**bintangjtobing/bintangjtobing** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Living and working as a tech educator/consultant, web full stack developer.
 
-Here are some ideas to get you started:
+<a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="150" /></a>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 💎 Founder of [Boxity] app, a ERP applications, i still make it private because i'm still playing on it.
+- 💬 Contact me via [bintangtobing.com](https://workwith.bintangtobing.com), [Instagram](https://bintangtobing.com/instagram), or [LinkedIn](https://bintangtobing.com/linkedin). You can ask me or get help about anything relevant to life, education, web developer, interface and experience design, also entrepreneurship.
+
+Enjoy your day! You can also follow me on Instagram:
+
+<a href="https://bintangtobing.com/instagram">
+  <img alt="Instagram Follow" src="https://img.shields.io/badge/Follow%20@bintangjtobing-1-lightgrey?style=for-the-badge">
+</a>
