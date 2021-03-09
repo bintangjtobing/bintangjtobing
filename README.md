@@ -4,7 +4,7 @@
 
 <a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="150" /></a>
 
-- 💎 Founder of [Boxity] app, a ERP applications, i still make it private because i'm still playing on it.
+- 💎 Founder of [Boxity] app, an ERP applications, i still make it private because i'm still playing on it.
 - 💬 Contact me via [bintangtobing.com](https://workwith.bintangtobing.com), [Instagram](https://bintangtobing.com/instagram), or [LinkedIn](https://bintangtobing.com/linkedin). You can ask me or get help about anything relevant to life, education, web developer, interface and experience design, also entrepreneurship.
 
 Enjoy your day! You can also follow me on Instagram:
