@@ -9,6 +9,6 @@
 
 Enjoy your day! You can also follow me on Instagram:
 
-<a href="https://bintangtobing.com/instagram">
-  <img alt="Instagram Follow" src="https://img.shields.io/badge/Follow%20@bintangjtobing-1-lightgrey?style=for-the-badge">
+<a href="https://instagram.com/bcjlt">
+  <img alt="Instagram Follow" src="https://img.shields.io/badge/Follow%20@bcjlt-1-lightgrey?style=for-the-badge">
 </a>
