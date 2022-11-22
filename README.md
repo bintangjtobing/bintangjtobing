@@ -1,11 +1,11 @@
-# 🤠 Hi there, I'm [Bintang](https://bintangtobing.com). You can call me like "bin"?
+# 🤠 Hi there, I'm [Bintang](https://bintangtobing.com). Can you call me "bin"?
 
-## Living and working as a tech educator/consultant, web full stack developer.
+## I live and work as a tech educator/consultant and web full-stack developer.
 
 <a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="150" /></a>
 
-- 💎 Founder of [Boxity] app, an ERP applications, i still make it private because i'm still playing on it.
-- 💬 Contact me via [bintangtobing.com](https://workwith.bintangtobing.com), [Instagram](https://bintangtobing.com/instagram), or [LinkedIn](https://bintangtobing.com/linkedin). You can ask me or get help about anything relevant to life, education, web developer, interface and experience design, also entrepreneurship.
+- 💎 Founder of [Boxity] app, an ERP application. I still make it private because I'm still playing on it.
+- 💬 Contact me via [bintangtobing.com](https://workwith.bintangtobing.com), [Instagram](https://bintangtobing.com/instagram), or [LinkedIn](https://bintangtobing.com/linkedin). You can ask me or get help with anything relevant to life, education, web development, interface and experience design, also entrepreneurship.
 
 Enjoy your day! You can also follow me on Instagram:
 
