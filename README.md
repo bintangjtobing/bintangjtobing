@@ -1,5 +1,5 @@
 # 🤠 Hi there, I'm [Bintang](https://bintangtobing.com). Can you call me "bin"?
-<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/SWoSkN6DxTszqIKEqv" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/SWoSkN6DxTszqIKEqv">via GIPHY</a></p>
+<img src="https://giphy.com/embed/SWoSkN6DxTszqIKEqv" style="width:100%;height:0;padding-bottom:75%;position:relative;"></img>
 
 ## I live and work as a Project Manager, Product Owner, and Full-stack web developer
 Experienced development and start in management business experience in 2021 on Boxity startup. I started Boxity because many of my projects use similar programs and I thinking about effective ways, that will not make me develop the application from zero, and I started to design the app, design the flow, design the UI/UX and, the final idea is, I begin to focus develop in ERP section which distributes it with SaaS way to SME needs. Still have progress but it's slow because I do it by myself, I need a tech leader who can help me stay in control of the development process with the vendor, and indeed I need a salesman, who can help me to sell the product to make a GREAT REVENUE for we can fly higher!
