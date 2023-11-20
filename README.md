@@ -1,16 +1,33 @@
-# 🤠 Hi there, I'm [Bintang](https://bintangtobing.com). Can you call me "bin"?
-<img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" style="width:60%;height:0;padding-bottom:3rem;position:relative;align:center;"></img>
+# Hi there, I'm [Bintang](https://bintangtobing.com) 👋🧑‍💻
+<img src="https://res.cloudinary.com/du0tz73ma/image/upload/v1700506323/github_cover_bintangtobing_kus3ew.png" style="width:100%;height:auto;position:relative;align:center;"></img>
 
-## I live and work as a Project Manager, Product Owner, and Full-stack web developer
-Experienced development and start in management business experience in 2021 on Boxity startup. I started Boxity because many of my projects use similar programs and I thinking about effective ways, that will not make me develop the application from zero, and I started to design the app, design the flow, design the UI/UX and, the final idea is, I begin to focus develop in ERP section which distributes it with SaaS way to SME needs. Still have progress but it's slow because I do it by myself, I need a tech leader who can help me stay in control of the development process with the vendor, and indeed I need a salesman, who can help me to sell the product to make a GREAT REVENUE for we can fly higher!
+A web developer, project manager, and product owner/manager who lives and works in Medan, Indonesia. I was born in Medan on October 21, 1998.
 
-<a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="150" /></a>
+I started my web development career in 2016 in second grade at a vocational school. I founded a startup called [Boxity](https://boxity.id) in 2021. [BoxityERP](https://boxity.id) is an ERP platform that provides business management solutions for MSMEs. I have a passion for helping MSMEs in Indonesia. I'm also active in the field of education and share my knowledge with others.
 
-- 💎 Founder of [Boxity] app, an ERP applications. Still make it private because I'm still playing on it.
-- 💬 Contact me via [bintangtobing.com](https://workwith.bintangtobing.com), [Instagram](https://bintangtobing.com/instagram), or [LinkedIn](https://bintangtobing.com/linkedin). You can ask me or get help with anything relevant to life, education, web development, interface and experience design, also entrepreneurship.
+I was also active in the field of education. I am a mentor in the Hackathon for Youth program in 2022 and have also been a speaker at several startup events.
 
-Enjoy your day! You can also follow me on Instagram:
+## Awards or Achievement 📸👑:
+- Winner of Hackathon for Youth 2022
+- Winner of the 2 best pitch decks at the 2023 Medan City Startup Weekend event
 
+<a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="200" /></a>
+
+Bringing product ideas that I developed as Product Owner at [PT. Boxity Central Indonesia](https://boxity.id) in the nomination qualifications:
+- Nominated in the top 20 in the Founder+ incubator program
+- Top 5 nominations at Indigo Clinic Startup from Telkom
+- Selected in the top 250 global startups in the Slingshot 2022 program – deep tech startup pitching – Singapore
+- Top 100 Global Startups in the Huawei Spark Ignite 2022 Program - Global Startup Competition, organized by Huawei
+- Selected as one of the Top 32 potential startups in the incubation program Hatch! Gerakan 1000 Startup Digital Nasional Kemenkominfo.
+- Qualified to participate in Entrepreneur Development 2023 dari Kementerian Koperasi dan Usaha Kecil dan Menengah
+- Pemenang juara 2 di acara Startup Exhibition Medan 2023
+
+## Find me around the web 🌏:
+- My resume on [my official website](https://bintangtobing.com)✍
+- Projects that I've did before are on [published paper](https://bintangtobing.com/business/portfolio-2023.pdf)💻
+- Sharing updates on [Linkedin](https://linkedin.com/in/bintangtobing)💼
+
+#### Enjoy your day! You can also follow me on Instagram:
 <a href="https://instagram.com/bcjlt">
-  <img alt="Instagram Follow" src="https://img.shields.io/badge/Follow%20@bcjlt-1-lightgrey?style=for-the-badge">
+  <img alt="Instagram Follow" src="https://img.shields.io/badge/Follow%20@bcjlt-1-orange?style=for-the-badge">
 </a>
