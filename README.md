@@ -20,7 +20,7 @@ Bringing product ideas that I developed as Product Owner at [PT. Boxity Central 
 - Top 100 Global Startups in the Huawei Spark Ignite 2022 Program - Global Startup Competition, organized by Huawei
 - Selected as one of the Top 32 potential startups in the incubation program Hatch! Gerakan 1000 Startup Digital Nasional Kemenkominfo.
 - Qualified to participate in Entrepreneur Development 2023 dari Kementerian Koperasi dan Usaha Kecil dan Menengah
-- Pemenang juara 2 di acara Startup Exhibition Medan 2023
+- 2nd place winner at the 2023 Medan Startup Exhibition event
 
 ## Find me around the web 🌏:
 - My resume on [my official website](https://bintangtobing.com)✍
