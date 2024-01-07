@@ -4,7 +4,8 @@
 <br>
 </p>
 <img src="https://res.cloudinary.com/du0tz73ma/image/upload/v1700506323/github_cover_bintangtobing_kus3ew.png" style="width:100%;height:auto;position:relative;align:center;"></img>
-[![@bintangjtobing's Holopin board](https://holopin.io/api/user/board?user=bintangjtobing)](https://holopin.io/@bintangjtobing)
+
+[![An image of @bintangjtobing's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/bintangjtobing)](https://holopin.io/@bintangjtobing)
 
 A web developer, project manager, and product owner/manager who lives and works in Medan, Indonesia. I was born in Medan on October 21, 1998.
 
