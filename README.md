@@ -1,5 +1,10 @@
 # Hi there, I'm [Bintang](https://bintangtobing.com) 👋🧑‍💻
+<p align="left"> 
+<img src="https://komarev.com/ghpvc/?username=bintangjtobing&label=Profile%20views&color=0e75b6&style=flat" alt="Bintang Tobing" /> 
+<br>
+</p>
 <img src="https://res.cloudinary.com/du0tz73ma/image/upload/v1700506323/github_cover_bintangtobing_kus3ew.png" style="width:100%;height:auto;position:relative;align:center;"></img>
+[![@bintangjtobing's Holopin board](https://holopin.io/api/user/board?user=bintangjtobing)](https://holopin.io/@bintangjtobing)
 
 A web developer, project manager, and product owner/manager who lives and works in Medan, Indonesia. I was born in Medan on October 21, 1998.
 
