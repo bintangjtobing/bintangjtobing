@@ -12,6 +12,7 @@ I was also active in the field of education. I am a mentor in the Hackathon for 
 - Winner of the 2 best pitch decks at the 2023 Medan City Startup Weekend event
 
 <a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="200" /></a>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=bintangjtobing&" alt="Bintang Tobing" /></p>
 
 Bringing product ideas that I developed as Product Owner at [PT. Boxity Central Indonesia](https://boxity.id) in the nomination qualifications:
 - Nominated in the top 20 in the Founder+ incubator program
