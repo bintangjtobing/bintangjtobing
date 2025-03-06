@@ -18,7 +18,7 @@ Dynamic Project Manager & Product Owner with 8+ years of experience delivering i
 - Founder+ Incubator Program – Top 20 Nominee
 
 <a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="200" /></a>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=bintangjtobing&" alt="Bintang Tobing" /></p>
+<img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=bintangjtobing&" alt="Bintang Tobing" />
 
 ## 🎙️ Bite-Sized Insights (Podcast & Newsletter)
 Sharing insights on management, leadership, product innovation, and business growth.
