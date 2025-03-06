@@ -6,9 +6,9 @@
 
 ## 🚀 Experienced Project Manager & Product Owner | Agile Expert
 ### Driving Product Innovation & Operational Excellence
-Dynamic Project Manager & Product Owner with 8+ years of experience delivering innovative solutions. Specialized in Agile methodologies, ERP development, API integration, and cross-functional leadership. Adept at stakeholder communication, risk management, and business process optimization.
+<p>Dynamic Project Manager & Product Owner with 8+ years of experience delivering innovative solutions. Specialized in Agile methodologies, ERP development, API integration, and cross-functional leadership. Adept at stakeholder communication, risk management, and business process optimization.</p>
 
-<a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="left" height="200" /></a>
+<a href="https://github.com/bintangjtobing"><img alt="Git Stats" src="https://github-readme-stats.vercel.app/api?username=bintangjtobing&include_all_commits=true&show_icons=true" align="right" height="200" /></a>
 
 ## Awards or Achievement 📸👑:
 - Top 100 Global Startups – Huawei Spark Ignite 2022
@@ -16,7 +16,7 @@ Dynamic Project Manager & Product Owner with 8+ years of experience delivering i
 - Top 5 Nomination – Indigo Clinic Startup (Telkom)
 - 2nd Place Winner – Medan Startup Exhibition 2023
 - Founder+ Incubator Program – Top 20 Nominee
-
+  
 <img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=bintangjtobing&" alt="Bintang Tobing" />
 
 ## 🎙️ Bite-Sized Insights (Podcast & Newsletter)
