@@ -7,6 +7,8 @@
 ### Dynamic Project Manager & Product Owner with 8+ years of experience delivering innovative solutions. Specialized in Agile methodologies, ERP development, API integration, and cross-functional leadership. Adept at stakeholder communication, risk management, and business process optimization.
 ---
 ## 🏆GitHub Profile Trophy
+<a href="https://u8views.com/github/bintangjtobing"><img src="https://u8views.com/api/v1/github/profiles/47741235/views/day-week-month-total-count.svg"></a>
+![bintangjtobing github-stats](https://stats.dooboo.io/api/github-stats-advanced?login=bintangjtobing)
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=bintangjtobing&theme=onedark&margin-w=15&margin-h=15&column=5&no-frame=true" alt="bintangjtobing" /></a> </p>
 
 </div>
@@ -78,7 +80,6 @@
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=bintangjtobing&layout=compact&langs_count=8&card_width=320&show_icons=true&locale=en&theme=slateorange&hide_border=true" alt="bintangjtobing" />
 </a>
 <img src="https://github-readme-streak-stats.herokuapp.com?user=bintangjtobing&theme=dark&hide_border=true" style="margin-top=20px" alt="bintangjtobing" />
-
 </div>
 
 ---
