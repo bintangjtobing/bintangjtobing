@@ -1,0 +1,106 @@
+# Bintang Tobing - Full Profile
+
+> Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist
+
+## Personal Information
+- Full Name: Bintang Cato Jeremia L Tobing
+- Location: United Arab Emirates (currently), Indonesia (origin)
+- Email: hello@bintangtobing.com
+- Phone: +62 812 6284 5980
+- Website: https://bintangtobing.com
+- LinkedIn: https://linkedin.com/in/bintangtobing
+- GitHub: https://github.com/bintangjtobing
+- Blog: https://press.bintangtobing.com
+- Instagram: https://instagram.com/bcjlt
+- Languages: Indonesian (Native), English (Professional Working Proficiency)
+
+## Professional Summary
+Results-driven Marketing Technology Leader with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development. Proven track record of delivering measurable business impact: 18% CTR increase, 36% traffic growth, 90% reduction in manual effort through AI orchestration (Anthropic Claude, OpenAI GPT), and 35.4% efficiency improvements. Expert in building intelligent marketing ecosystems using n8n automation, advanced analytics platforms, and full-stack development across fintech, manufacturing, and government sectors.
+
+## Professional Experience
+
+### Marketing and Technology Manager
+Bitunix Fintech LLC, United Arab Emirates | February 2025 - Present
+- Architected a comprehensive MarTech stack integrating CRM systems, Google Analytics 4, Meta Business Suite, TikTok Ads Manager, and Twitter Ads with automated UTM tracking and multi-channel attribution
+- Developed real-time analytics dashboards; implemented A/B testing and CRO experiments for enhanced campaign ROI
+- Led customer support operations, optimizing workflows for high satisfaction rates
+- Integrated emerging AI tools (Anthropic Claude, OpenAI) to automate workflows and drive operational efficiency
+
+### Project Manager
+Parla Consultancy Sdn Bhd, Kuala Lumpur | June 2024 - April 2025
+- Led data-driven marketing and sales campaigns using CRM systems and email marketing automation
+- Collaborated on API integration projects connecting back-office systems (Syntellicore, Dynamic Works) with member platforms
+- Developed full-stack web applications; managed server operations achieving 99.9% uptime
+
+### Software Engineer
+PT Dinamik Mobile (iPay88), Jakarta | June - November 2024
+- Delivered web-based payment applications using JavaScript, Laravel, and React.js through the full project lifecycle
+- Conducted technical requirements analysis and translated them into scalable payment solutions
+- Optimized site functionality, performance, and system reliability
+
+### Product Owner & Mobile App Developer
+PT Boxity Central Indonesia, Jakarta | March 2019 - November 2023
+- Spearheaded ERP platform development from 3 to 7 core modules serving 500+ MSMEs across Indonesia
+- Built 4 React Native mobile applications: warehouse tracking, inter-warehouse transactions, attendance monitoring, and financial reporting
+- Established CI/CD pipelines using GitHub; conducted UAT and penetration testing
+- Built strategic partnerships with policymakers; represented company at industry events
+
+### Full Stack Web Developer & Project Manager
+PT Benua Solusi Teknologi, Jakarta | September 2016 - October 2023
+- Managed end-to-end client projects; developed web apps for insurance data processing and CARE Tech systems
+- Built frontend (React.js) and backend (Node.js, Laravel) with database integration and server administration
+- Implemented security measures, maintained server integrity, and resolved system vulnerabilities
+
+### Web Developer (Remote)
+Digital Envision Pty. Ltd, Sydney, Australia | November 2020 - February 2021
+- Developed front-end and back-end applications using React Native, Flutter, Node.js, React.js, and Laravel
+- Built a water chemical management application for the Australian Government in collaboration with CRC Care
+
+## Key Projects & Impact
+
+### Cirrus Crypto Platform
+End-to-end signal broadcasting system with AI-powered analysis, VIP membership, and multi-language blog. Reduced content creation time by 90% with automated translation across 5+ languages.
+
+### URL Shortener & Campaign Analytics Platform
+Full-stack intelligent link management system with AI-assisted UTM automation and real-time analytics. Achieved 18% CTR increase (Duhani Capital) and 36% traffic growth (Bitunix.io).
+
+### YouTube-to-Twitter Automation Platform
+Intelligent content automation system integrating YouTube API, Anthropic Claude, OpenAI, and Twitter API via n8n. Reduced manual content creation effort by 90%.
+
+### PM Helper Platform
+Comprehensive project management system with Kanban/Scrum boards, sprint management, time tracking, and roadmap visualization.
+
+### ERP Platform (Boxity)
+Scaled from 3 to 7 core modules including warehouse management, financial reporting, attendance tracking, and inter-warehouse transactions. Serving 500+ MSMEs with React Native, Laravel, and Node.js.
+
+### PT DHK Manufacturing Optimization
+Customized warehouse and production management application. Achieved 35.4% efficiency increase in goods-receiving processes (2023-2024).
+
+### Kareya Interior Digital Strategy
+SEO-focused content marketing and lead generation systems. Delivered 250% website traffic increase and 180% growth in qualified leads for premium villa developments.
+
+## Technical Skills
+- AI & Automation: Anthropic Claude API, OpenAI GPT API, n8n Workflow Automation, Automa, Prompt Engineering, AI Pipeline Architecture
+- Marketing Technology: Google Analytics 4, Meta Business Suite, TikTok Ads Manager, Twitter Ads, CRM Integration, UTM Tracking, Multi-channel Attribution, A/B Testing, Conversion Rate Optimization
+- Programming & Frameworks: JavaScript, TypeScript, Python, PHP, React.js, Vue.js, Node.js, Laravel, React Native, Flutter, Next.js
+- Development Tools: Git, GitHub, Docker, CI/CD Pipelines, WordPress, Figma, Photoshop, Chrome Extension API
+- Databases & Infrastructure: MySQL, SQL Server, MongoDB, Server Administration, API Integration, REST APIs
+- Project Management: Agile/Scrum Methodologies, Kanban, Sprint Planning, Risk Management, Budgeting, Stakeholder Communication, SAP Analytics Cloud
+
+## Awards & Recognition
+- Top 250 Global Startups - Slingshot 2022 Deep Tech Startup Competition, Singapore
+- Top 100 Global Startups - Huawei Spark Ignite 2022 Program
+- Top 20 Nominee - Founder+ Incubator Program
+- Second Place Winner - Startup Exhibition Medan 2023
+- Top 32 Potential Startups - Hatch! Gerakan 1000 Startup Digital Nasional, Kemenkominfo
+
+## Certifications
+- IBM IT Project Manager Specialization - IBM & SkillUp EdTech (2025)
+- Google Project Management Professional Certificate - Google (2024)
+- ASEAN Data Science Explorers - SAP Analytics Cloud & SAP Build Apps - ASEAN Foundation (2024)
+- Cyber Security Certification - habiskerja.com (2022)
+- Front-end Web Development Quantum Degree - Next Academy, Kuala Lumpur (2019)
+
+## Education
+Rekayasa Perangkat Lunak (Software Engineering)
+SMK Negeri 1 Percut Sei Tuan, Indonesia

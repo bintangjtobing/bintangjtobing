@@ -1,0 +1,280 @@
+import { useEffect } from 'react';
+import { useApp } from '../context/AppContext';
+import SEO from '../components/SEO';
+import Controls from '../components/Controls';
+import StickyNav from '../components/StickyNav';
+import VerifiedBadge from '../components/VerifiedBadge';
+import Reveal from '../components/Reveal';
+import { trackPageView, trackOutboundLink, trackCtaClick, trackScrollDepth } from '../utils/tracking';
+import photo from '../assets/photo.jpg';
+
+const experiences = [
+  {
+    roleKey: 'exp.1.role',
+    meta: 'Bitunix Fintech LLC, United Arab Emirates · Feb 2025 – Present',
+    bullets: ['exp.1.b1', 'exp.1.b2', 'exp.1.b3', 'exp.1.b4'],
+  },
+  {
+    roleKey: 'exp.2.role',
+    meta: 'Parla Consultancy Sdn Bhd, Kuala Lumpur · Jun 2024 – Apr 2025',
+    bullets: ['exp.2.b1', 'exp.2.b2', 'exp.2.b3'],
+  },
+  {
+    roleKey: 'exp.3.role',
+    meta: 'PT Dinamik Mobile (iPay88), Jakarta · Jun – Nov 2024',
+    bullets: ['exp.3.b1', 'exp.3.b2', 'exp.3.b3'],
+  },
+  {
+    roleKey: 'exp.4.role',
+    meta: 'PT Boxity Central Indonesia, Jakarta · Mar 2019 – Nov 2023',
+    bullets: ['exp.4.b1', 'exp.4.b2', 'exp.4.b3', 'exp.4.b4'],
+  },
+  {
+    roleKey: 'exp.5.role',
+    meta: 'PT Benua Solusi Teknologi, Jakarta · Sep 2016 – Oct 2023',
+    bullets: ['exp.5.b1', 'exp.5.b2', 'exp.5.b3'],
+  },
+  {
+    roleKey: 'exp.6.role',
+    meta: 'Digital Envision Pty. Ltd, Sydney, Australia · Nov 2020 – Feb 2021',
+    bullets: ['exp.6.b1', 'exp.6.b2'],
+    suffix: <span style={{ fontWeight: 400, color: 'var(--muted)' }}> (Remote)</span>,
+  },
+];
+
+const projects = [
+  { name: 'Cirrus Crypto Platform', descKey: 'proj.1.desc', metrics: ['proj.1.m1'] },
+  { name: 'URL Shortener & Campaign Analytics', descKey: 'proj.2.desc', metrics: ['proj.2.m1', 'proj.2.m2'] },
+  { name: 'YouTube-to-Twitter Automation', descKey: 'proj.3.desc', metrics: ['proj.3.m1'] },
+  { name: 'PM Helper Platform', descKey: 'proj.4.desc', metrics: [] },
+  { name: 'ERP Platform · Boxity', descKey: 'proj.5.desc', metrics: ['proj.5.m1'], extraMetrics: ['React Native + Laravel'] },
+  { nameKey: 'proj.6.name', descKey: 'proj.6.desc', metrics: ['proj.6.m1'] },
+  { nameKey: 'proj.7.name', descKey: 'proj.7.desc', metrics: ['proj.7.m1', 'proj.7.m2'] },
+];
+
+const stackGroups = [
+  { labelKey: 'stack.ai', tags: ['Anthropic Claude API', 'OpenAI GPT', 'n8n', 'Prompt Engineering', 'AI Pipeline Architecture'] },
+  { labelKey: 'stack.prog', tags: ['JavaScript', 'TypeScript', 'Python', 'PHP'] },
+  { label: 'Frontend', tags: ['React.js', 'Next.js', 'Vue.js', 'React Native', 'Flutter'] },
+  { label: 'Backend', tags: ['Node.js', 'Laravel'] },
+  { labelKey: 'stack.db', tags: ['MySQL', 'SQL Server', 'MongoDB'] },
+  { labelKey: 'stack.martech', tags: ['Google Analytics 4', 'Meta Business Suite', 'TikTok Ads', 'Twitter Ads', 'CRM', 'UTM Tracking', 'A/B Testing', 'CRO'] },
+  { labelKey: 'stack.tools', tags: ['Git', 'Docker', 'CI/CD', 'WordPress', 'Figma', 'Chrome Extension API'] },
+];
+
+const awards = [
+  { rank: 'Top 250 Global', detail: 'Slingshot 2022 Deep Tech Startup Competition, Singapore' },
+  { rank: 'Top 100 Global', detail: 'Huawei Spark Ignite 2022 Program' },
+  { rankKey: 'award.3.rank', detail: 'Founder+ Incubator Program' },
+  { rankKey: 'award.4.rank', detail: 'Startup Exhibition Medan 2023' },
+  { rank: 'Top 32', detail: 'Hatch! Gerakan 1000 Startup Digital Nasional, Kemenkominfo' },
+];
+
+const certs = [
+  { name: 'IBM IT Project Manager Specialization', org: 'IBM & SkillUp EdTech', year: '2025' },
+  { name: 'Google Project Management Professional Certificate', org: 'Google', year: '2024' },
+  { name: 'ASEAN Data Science Explorers', org: 'SAP Analytics Cloud, ASEAN Foundation', year: '2024' },
+  { name: 'Cyber Security Certification', org: 'habiskerja.com', year: '2022' },
+  { name: 'Front-end Web Development Quantum Degree', org: 'Next Academy, Kuala Lumpur', year: '2019' },
+];
+
+const heroLinks = [
+  { label: 'Email', href: 'mailto:hello@bintangtobing.com?cc=bintangjtobing@gmail.com', title: 'Send email to Bintang Tobing', track: 'email' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn', track: 'linkedin' },
+  { label: 'GitHub', href: 'https://github.com/bintangjtobing', title: 'Bintang Tobing on GitHub', track: 'github' },
+  { label: 'Press', href: 'https://press.bintangtobing.com', title: 'Bintang Tobing Blog & Press', track: 'press' },
+  { label: 'Website', href: 'https://bintangtobing.com', title: 'Bintang Tobing Personal Website', track: 'website' },
+];
+
+export default function Home() {
+  const { t } = useApp();
+
+  useEffect(() => {
+    trackPageView('/', 'Home');
+
+    // Scroll depth tracking
+    const thresholds = [25, 50, 75, 100];
+    const fired = new Set();
+
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      const percent = Math.round((scrollTop / docHeight) * 100);
+
+      thresholds.forEach(t => {
+        if (percent >= t && !fired.has(t)) {
+          fired.add(t);
+          trackScrollDepth(t);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const handleLinkClick = (label, href) => {
+    trackOutboundLink(href, label);
+  };
+
+  return (
+    <>
+      <SEO
+        title="Bintang Tobing | Marketing Technology & Full-Stack Developer"
+        description="Bintang Tobing | Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development."
+        path="/"
+      />
+      <Controls />
+      <StickyNav />
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-inner">
+          <div className="hero-top hero-enter hero-enter-d1">
+            <div className="hero-photo">
+              <img src={photo} alt="Bintang Tobing - Marketing Technology Manager and Full-Stack Developer" title="Bintang Tobing" />
+            </div>
+            <div>
+              <div className="hero-name-row">
+                <h1 className="hero-name">Bintang Tobing</h1>
+                <VerifiedBadge />
+              </div>
+              <p className="hero-tagline">{t('hero.tagline')}</p>
+            </div>
+          </div>
+
+          <p className="hero-summary hero-enter hero-enter-d2">{t('hero.summary')}</p>
+
+          <ul className="hero-links hero-enter hero-enter-d3">
+            {heroLinks.map(link => (
+              <li key={link.track}>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith('mailto') ? undefined : '_blank'}
+                  rel={link.href.startsWith('mailto') ? undefined : 'noopener'}
+                  title={link.title}
+                  onClick={() => handleLinkClick(link.track, link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <div className="section-divider" />
+      <section className="section" id="experience">
+        <Reveal trackId="experience"><p className="section-label">{t('section.experience')}</p></Reveal>
+        {experiences.map((exp, i) => (
+          <Reveal key={i}>
+            <div className="exp-item">
+              <h3 className="exp-role">{t(exp.roleKey)}{exp.suffix}</h3>
+              <p className="exp-meta">{exp.meta}</p>
+              <ul className="exp-bullets">
+                {exp.bullets.map((bk) => <li key={bk}>{t(bk)}</li>)}
+              </ul>
+            </div>
+          </Reveal>
+        ))}
+      </section>
+
+      {/* PROJECTS */}
+      <div className="section-divider" />
+      <section className="section" id="projects">
+        <Reveal trackId="projects"><p className="section-label">{t('section.projects')}</p></Reveal>
+        <div className="project-grid">
+          {projects.map((p, i) => (
+            <Reveal key={i}>
+              <div className="project-card">
+                <h3 className="project-name">{p.nameKey ? t(p.nameKey) : p.name}</h3>
+                <p className="project-desc">{t(p.descKey)}</p>
+                {p.metrics.map((mk) => <span key={mk} className="project-metric">{t(mk)}</span>)}
+                {p.extraMetrics?.map((m) => <span key={m} className="project-metric">{m}</span>)}
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal>
+          <a
+            href="https://cirrus-hub.net/portfolio?utm_source=bintangtobing.com&utm_medium=personal-site&utm_campaign=portfolio-cta"
+            target="_blank"
+            rel="noopener"
+            title="View Bintang Tobing's project portfolio and case studies"
+            className="portfolio-cta"
+            onClick={() => trackCtaClick('portfolio', 'https://cirrus-hub.net/portfolio')}
+          >
+            <div className="portfolio-cta-text">
+              <span className="portfolio-cta-title">{t('cta.title')}</span>
+              <span className="portfolio-cta-sub">cirrus-hub.net/portfolio</span>
+            </div>
+            <span className="portfolio-cta-arrow">&rarr;</span>
+          </a>
+        </Reveal>
+      </section>
+
+      {/* TECH STACK */}
+      <div className="section-divider" />
+      <section className="section" id="stack">
+        <Reveal trackId="stack"><p className="section-label">{t('section.stack')}</p></Reveal>
+        {stackGroups.map((g, i) => (
+          <Reveal key={i}>
+            <div className="stack-group">
+              <p className="stack-group-label">{g.labelKey ? t(g.labelKey) : g.label}</p>
+              <div className="stack-tags">
+                {g.tags.map((tag) => <span key={tag} className="stack-tag" title={tag}>{tag}</span>)}
+              </div>
+            </div>
+          </Reveal>
+        ))}
+      </section>
+
+      {/* AWARDS */}
+      <div className="section-divider" />
+      <section className="section" id="awards">
+        <Reveal trackId="awards"><p className="section-label">{t('section.awards')}</p></Reveal>
+        <ul className="award-list">
+          {awards.map((a, i) => (
+            <Reveal key={i}>
+              <li className="award-item">
+                <span className="award-rank">{a.rankKey ? t(a.rankKey) : a.rank}</span>
+                <span className="award-detail">{a.detail}</span>
+              </li>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
+      {/* CERTIFICATIONS */}
+      <div className="section-divider" />
+      <section className="section" id="certifications">
+        <Reveal trackId="certifications"><p className="section-label">{t('section.certs')}</p></Reveal>
+        <ul className="cert-list">
+          {certs.map((c, i) => (
+            <Reveal key={i}>
+              <li className="cert-item">
+                <span className="cert-name"><strong>{c.name}</strong> · {c.org}</span>
+                <span className="cert-year">{c.year}</span>
+              </li>
+            </Reveal>
+          ))}
+        </ul>
+      </section>
+
+      {/* FOOTER */}
+      <div className="section-divider" />
+      <footer>
+        <span className="footer-copy">&copy; 2026 Bintang Tobing</span>
+        <ul className="footer-nav">
+          <li><a href="#experience" title="Experience section">{t('nav.experience')}</a></li>
+          <li><a href="#projects" title="Projects section">{t('nav.projects')}</a></li>
+          <li><a href="#stack" title="Tech Stack section">{t('nav.stack')}</a></li>
+          <li><a href="#awards" title="Awards section">{t('nav.awards')}</a></li>
+          <li><a href="#certifications" title="Certifications section">{t('nav.certs')}</a></li>
+        </ul>
+      </footer>
+    </>
+  );
+}

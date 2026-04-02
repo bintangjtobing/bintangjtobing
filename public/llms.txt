@@ -1,0 +1,28 @@
+# Bintang Tobing - Personal Website
+
+> Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist
+
+Bintang Tobing is a results-driven professional with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development across fintech, manufacturing, and government sectors.
+
+## Current Role
+Marketing and Technology Manager at Bitunix Fintech LLC, United Arab Emirates (Feb 2025 - Present)
+
+## Core Expertise
+- AI Integration & Automation (Anthropic Claude, OpenAI, n8n)
+- Marketing Technology (GA4, Meta Business Suite, TikTok Ads, CRM)
+- Full-Stack Development (React.js, Node.js, Laravel, React Native)
+- Project & Product Management (Agile/Scrum, ERP Systems)
+
+## Contact
+- Email: hello@bintangtobing.com
+- LinkedIn: linkedin.com/in/bintangtobing
+- GitHub: github.com/bintangjtobing
+- Blog: press.bintangtobing.com
+- Website: bintangtobing.com
+
+## Pages
+- [Home](https://bintangtobing.com/): Full profile, experience, projects, tech stack, awards, certifications
+- [Links](https://bintangtobing.com/links): All social and professional links
+
+## More Info
+- [Full details](https://bintangtobing.com/llms-full.txt)
