@@ -26,6 +26,7 @@ const linkGroups = [
     groupName: 'Professional',
     links: [
       { icon: '\uD83D\uDCBC', labelKey: 'link.work', fallbackLabel: 'Work Together', url: 'https://cirrus-hub.net/appointment?utm_source=bintangtobing-links&utm_medium=share-on-links', title: 'Schedule a meeting with Bintang Tobing', thumbnail: true, thumbSrc: thumbCirrus, thumbAlt: 'Cirrus Hub appointment page preview' },
+      { icon: '\uD83D\uDCCA', labelKey: 'link.kscore', fallbackLabel: 'Audit 6 sosmed kamu dalam 2 menit', url: 'https://klindros.com/kscore/personal?utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=kscore-personal&utm_content=links-page', title: 'Audit 6 sosmed kamu dalam 2 menit dengan kScore by KlindrOS' },
       { icon: 'in', label: 'LinkedIn', url: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn' },
       { icon: '\u270D', labelKey: 'link.freelance', fallbackLabel: 'Freelance Projects', url: 'https://www.upwork.com/freelancers/~01981e16848fe1eecf', title: 'Hire Bintang Tobing on Upwork' },
       { icon: '\uD83C\uDF93', labelKey: 'link.certs', fallbackLabel: 'Licenses & Certifications', url: 'https://coursera.org/learner/bintang-tobing', title: 'Bintang Tobing certifications on Coursera' },
@@ -46,7 +47,7 @@ const linkGroups = [
     links: [
       { icon: '\uD83D\uDCF7', label: 'Instagram', url: 'https://instagram.com/bcjlt', title: 'Bintang Tobing on Instagram @bcjlt', thumbnail: true, thumbSrc: thumbInstagram, thumbAlt: 'Bintang Tobing Instagram profile preview' },
       { icon: '\u266B', label: 'TikTok', url: 'https://www.tiktok.com/@tatangkatanyaa', title: 'Bintang Tobing on TikTok @tatangkatanyaa' },
-      { icon: '\uD83D\uDCB0', labelKey: 'link.earn', fallbackLabel: 'Earning Opportunity', url: 'https://short.bitunixads.com/3x59hr', title: 'Earning opportunity via Bitunix' },
+      { icon: '\uD83D\uDCB0', labelKey: 'link.earn', fallbackLabel: 'Earning Opportunity', url: 'https://www.bitunix.com/register?inviteCode=ab9nr3&utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=bitunix-earn&utm_content=links-page', title: 'Earning opportunity via Bitunix' },
     ],
   },
   {

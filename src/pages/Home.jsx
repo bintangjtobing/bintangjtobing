@@ -11,7 +11,7 @@ import photo from '../assets/photo.jpg';
 const experiences = [
   {
     roleKey: 'exp.1.role',
-    meta: 'Bitunix Fintech LLC, United Arab Emirates · Feb 2025 – Present',
+    meta: 'Bitunix Fintech LLC, United Arab Emirates · Feb 2025 – May 2026',
     bullets: ['exp.1.b1', 'exp.1.b2', 'exp.1.b3', 'exp.1.b4'],
   },
   {
@@ -26,12 +26,12 @@ const experiences = [
   },
   {
     roleKey: 'exp.4.role',
-    meta: 'PT Boxity Central Indonesia, Jakarta · Mar 2019 – Nov 2023',
+    meta: 'PT Boxity Central Indonesia, Jakarta · Mar 2021 – Nov 2023',
     bullets: ['exp.4.b1', 'exp.4.b2', 'exp.4.b3', 'exp.4.b4'],
   },
   {
     roleKey: 'exp.5.role',
-    meta: 'PT Benua Solusi Teknologi, Jakarta · Sep 2016 – Oct 2023',
+    meta: 'PT Benua Solusi Teknologi, Jakarta · Sep 2018 – Oct 2023',
     bullets: ['exp.5.b1', 'exp.5.b2', 'exp.5.b3'],
   },
   {
@@ -43,23 +43,27 @@ const experiences = [
 ];
 
 const projects = [
+  { name: 'KlindrOS', descKey: 'proj.klindros.desc', metrics: ['proj.klindros.m1', 'proj.klindros.m2'], extraMetrics: ['Laravel 11 + Next.js 16 + Expo'] },
+  { name: 'Bitunix MarTech Dashboard', descKey: 'proj.bitunix.desc', metrics: ['proj.bitunix.m1', 'proj.bitunix.m2'] },
+  { name: 'PMHelper', descKey: 'proj.4.desc', metrics: ['proj.4.m1', 'proj.4.m2'] },
   { name: 'Cirrus Crypto Platform', descKey: 'proj.1.desc', metrics: ['proj.1.m1'] },
-  { name: 'URL Shortener & Campaign Analytics', descKey: 'proj.2.desc', metrics: ['proj.2.m1', 'proj.2.m2'] },
+  { name: 'AI Marketing Extension', descKey: 'proj.2.desc', metrics: ['proj.2.m1', 'proj.2.m2'] },
   { name: 'YouTube-to-Twitter Automation', descKey: 'proj.3.desc', metrics: ['proj.3.m1'] },
-  { name: 'PM Helper Platform', descKey: 'proj.4.desc', metrics: [] },
   { name: 'ERP Platform · Boxity', descKey: 'proj.5.desc', metrics: ['proj.5.m1'], extraMetrics: ['React Native + Laravel'] },
   { nameKey: 'proj.6.name', descKey: 'proj.6.desc', metrics: ['proj.6.m1'] },
   { nameKey: 'proj.7.name', descKey: 'proj.7.desc', metrics: ['proj.7.m1', 'proj.7.m2'] },
 ];
 
 const stackGroups = [
-  { labelKey: 'stack.ai', tags: ['Anthropic Claude API', 'OpenAI GPT', 'n8n', 'Prompt Engineering', 'AI Pipeline Architecture'] },
+  { labelKey: 'stack.ai', tags: ['Anthropic Claude API', 'OpenAI GPT-4o', 'MCP', 'n8n', 'Prompt Engineering', 'AI Pipeline Architecture'] },
   { labelKey: 'stack.prog', tags: ['JavaScript', 'TypeScript', 'Python', 'PHP'] },
-  { label: 'Frontend', tags: ['React.js', 'Next.js', 'Vue.js', 'React Native', 'Flutter'] },
-  { label: 'Backend', tags: ['Node.js', 'Laravel'] },
-  { labelKey: 'stack.db', tags: ['MySQL', 'SQL Server', 'MongoDB'] },
+  { label: 'Frontend', tags: ['React.js', 'Next.js', 'Vue.js', 'React Native', 'Expo', 'Flutter', 'TailwindCSS', 'shadcn/ui', 'Alpine.js'] },
+  { label: 'Backend', tags: ['Node.js', 'Laravel', 'Filament', 'Livewire', 'REST API', 'GraphQL'] },
+  { labelKey: 'stack.db', tags: ['PostgreSQL', 'MySQL', 'SQL Server', 'MongoDB', 'Redis'] },
+  { labelKey: 'stack.realtime', tags: ['Pusher Channels', 'Jitsi Meet (self-hosted)', 'Laravel Horizon', 'BigQuery'] },
   { labelKey: 'stack.martech', tags: ['Google Analytics 4', 'Meta Business Suite', 'TikTok Ads', 'Twitter Ads', 'CRM', 'UTM Tracking', 'A/B Testing', 'CRO'] },
-  { labelKey: 'stack.tools', tags: ['Git', 'Docker', 'CI/CD', 'WordPress', 'Figma', 'Chrome Extension API'] },
+  { labelKey: 'stack.devops', tags: ['Git', 'GitHub', 'Docker', 'CI/CD', 'Nginx', 'PM2', 'Let’s Encrypt', 'fail2ban', 'Server Administration'] },
+  { labelKey: 'stack.tools', tags: ['Vite', 'WordPress', 'Figma', 'Photoshop', 'Chrome Extension API'] },
 ];
 
 const awards = [
