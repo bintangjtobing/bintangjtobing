@@ -29,6 +29,7 @@ const linkGroups = [
       { icon: '\uD83D\uDCCA', labelKey: 'link.kscore', fallbackLabel: 'Audit 6 sosmed kamu dalam 2 menit', url: 'https://klindros.com/kscore/personal?utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=kscore-personal&utm_content=links-page', title: 'Audit 6 sosmed kamu dalam 2 menit dengan kScore by KlindrOS' },
       { icon: 'in', label: 'LinkedIn', url: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn' },
       { icon: '\u270D', labelKey: 'link.freelance', fallbackLabel: 'Freelance Projects', url: 'https://www.upwork.com/freelancers/~01981e16848fe1eecf', title: 'Hire Bintang Tobing on Upwork' },
+      { icon: '\uD83E\uDD1D', labelKey: 'link.hire', fallbackLabel: 'Hire me as a full-stack dev or product manager', url: 'https://jobs.employmenthero.com/user/bintang-tobing-ZeKHvw', title: 'Hire Bintang Tobing as a full-stack web developer or product manager' },
       { icon: '\uD83C\uDF93', labelKey: 'link.certs', fallbackLabel: 'Licenses & Certifications', url: 'https://coursera.org/learner/bintang-tobing', title: 'Bintang Tobing certifications on Coursera' },
     ],
   },
