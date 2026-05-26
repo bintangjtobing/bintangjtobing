@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet-async';
 const SITE_URL = 'https://bintangtobing.com';
 const OG_IMAGE = `${SITE_URL}/og-image.jpg?v=2`;
 
+// Years of experience auto-grow from start years (no manual edits needed).
+const FS_YEARS = new Date().getFullYear() - 2016; // Full-Stack Developer since 2016
+
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -10,14 +13,21 @@ const personSchema = {
   alternateName: 'Bintang Tobing',
   url: SITE_URL,
   image: OG_IMAGE,
-  jobTitle: 'Marketing Technology Manager',
-  description: 'Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist with 9+ years of expertise.',
+  jobTitle: ['Product Manager', 'Project Manager', 'Full-Stack Developer', 'Marketing Technology Manager'],
+  description: `Product & Project Manager and Full-Stack Developer with ${FS_YEARS}+ years of experience, based in Indonesia and the UAE and working across ASEAN and remotely worldwide. Specializing in MarTech, AI integration, and fintech.`,
   email: 'hello@bintangtobing.com',
   telephone: '+6281262845980',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'AE',
   },
+  nationality: { '@type': 'Country', name: 'Indonesia' },
+  homeLocation: { '@type': 'Place', name: 'Indonesia' },
+  workLocation: [
+    { '@type': 'Place', name: 'United Arab Emirates' },
+    { '@type': 'Place', name: 'ASEAN' },
+    { '@type': 'Place', name: 'Remote, Worldwide' },
+  ],
   sameAs: [
     'https://linkedin.com/in/bintangtobing',
     'https://github.com/bintangjtobing',
@@ -27,6 +37,10 @@ const personSchema = {
     'https://www.upwork.com/freelancers/~01981e16848fe1eecf',
   ],
   knowsAbout: [
+    'Product Management',
+    'Project Management',
+    'Agile',
+    'Scrum',
     'Marketing Technology',
     'Full-Stack Development',
     'AI Integration',
@@ -70,15 +84,15 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'Bintang Tobing',
   url: SITE_URL,
-  description: 'Personal website of Bintang Tobing, Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist.',
+  description: 'Personal website of Bintang Tobing, Product & Project Manager and Full-Stack Developer based in Indonesia, UAE, and remote worldwide.',
   author: { '@type': 'Person', name: 'Bintang Tobing' },
   publisher: { '@type': 'Person', name: 'Bintang Tobing', url: SITE_URL },
   inLanguage: ['en', 'id'],
 };
 
 export default function SEO({
-  title = 'Bintang Tobing | Marketing Technology & Full-Stack Developer',
-  description = 'Bintang Tobing | Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development.',
+  title = 'Bintang Tobing | Product & Project Manager · Full-Stack Developer',
+  description = 'Bintang Tobing, Product & Project Manager and Full-Stack Developer based in Indonesia & UAE, delivering products across ASEAN and remotely worldwide. MarTech, AI integration & fintech.',
   path = '/',
   type = 'website',
   schemas = [personSchema, websiteSchema],

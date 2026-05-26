@@ -93,6 +93,14 @@ const heroLinks = [
 export default function Home() {
   const { t } = useApp();
 
+  // Years of experience auto-grow from start years (no manual updates needed).
+  const currentYear = new Date().getFullYear();
+  const fsYears = currentYear - 2016; // Full-Stack Developer since 2016
+  const pmYears = currentYear - 2018; // Product / Project Manager since 2018
+  const heroSummary = t('hero.summary')
+    .replace('{fsYears}', fsYears)
+    .replace('{pmYears}', pmYears);
+
   useEffect(() => {
     trackPageView('/', 'Home');
 
@@ -125,8 +133,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Bintang Tobing | Marketing Technology & Full-Stack Developer"
-        description="Bintang Tobing | Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development."
+        title="Bintang Tobing | Product & Project Manager · Full-Stack Developer"
+        description="Bintang Tobing, Product & Project Manager and Full-Stack Developer based in Indonesia & UAE, delivering products across ASEAN and remotely worldwide. MarTech, AI integration & fintech."
         path="/"
       />
       <Controls />
@@ -148,7 +156,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="hero-summary hero-enter hero-enter-d2">{t('hero.summary')}</p>
+          <p className="hero-summary hero-enter hero-enter-d2">{heroSummary}</p>
 
           <ul className="hero-links hero-enter hero-enter-d3">
             {heroLinks.map(link => (
@@ -156,7 +164,7 @@ export default function Home() {
                 <a
                   href={link.href}
                   target={link.href.startsWith('mailto') ? undefined : '_blank'}
-                  rel={link.href.startsWith('mailto') ? undefined : 'noopener'}
+                  rel={link.href.startsWith('mailto') ? undefined : 'me noopener'}
                   title={link.title}
                   onClick={() => handleLinkClick(link.event, link.href)}
                 >

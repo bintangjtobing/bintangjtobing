@@ -8,9 +8,9 @@ import { fileURLToPath } from 'node:url';
 
 const dist = resolve(dirname(fileURLToPath(import.meta.url)), '../dist');
 
-const HOME_TITLE = 'Bintang Tobing | Marketing Technology & Full-Stack Developer';
+const HOME_TITLE = 'Bintang Tobing | Product & Project Manager · Full-Stack Developer';
 const HOME_DESC =
-  'Bintang Tobing | Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist with 9+ years of expertise.';
+  'Bintang Tobing, Product & Project Manager and Full-Stack Developer based in Indonesia & UAE, delivering products across ASEAN and remotely worldwide. MarTech, AI integration & fintech.';
 
 const LINKS_TITLE = 'Bintang Tobing | Links';
 const LINKS_DESC =

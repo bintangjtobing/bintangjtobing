@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
-import SEO from '../components/SEO';
+import SEO, { personSchema } from '../components/SEO';
 import Controls from '../components/Controls';
 import VerifiedBadge from '../components/VerifiedBadge';
 import { trackPageView, trackEvent } from '../utils/tracking';
@@ -21,6 +21,15 @@ const linksSchema = {
   publisher: { '@type': 'Person', name: 'Bintang Tobing', url: 'https://bintangtobing.com' },
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://bintangtobing.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Links', item: 'https://bintangtobing.com/links' },
+  ],
+};
+
 const linkGroups = [
   {
     labelKey: 'group.professional',
@@ -28,27 +37,27 @@ const linkGroups = [
     links: [
       { icon: '\uD83D\uDCBC', event: 'click_link_work_together', labelKey: 'link.work', fallbackLabel: 'Work Together', url: 'https://cirrus-hub.net/appointment?utm_source=bintangtobing-links&utm_medium=share-on-links', title: 'Schedule a meeting with Bintang Tobing', thumbnail: true, thumbSrc: thumbCirrus, thumbAlt: 'Cirrus Hub appointment page preview' },
       { icon: '\uD83D\uDCCA', event: 'click_link_kscore', labelKey: 'link.kscore', fallbackLabel: 'Audit 6 sosmed kamu dalam 2 menit', url: 'https://klindros.com/kscore/personal?utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=kscore-personal&utm_content=links-page', title: 'Audit 6 sosmed kamu dalam 2 menit dengan kScore by KlindrOS' },
-      { icon: 'in', event: 'click_link_linkedin', label: 'LinkedIn', url: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn' },
-      { icon: '\u270D', event: 'click_link_freelance', labelKey: 'link.freelance', fallbackLabel: 'Freelance Projects', url: 'https://www.upwork.com/freelancers/~01981e16848fe1eecf', title: 'Hire Bintang Tobing on Upwork' },
-      { icon: '\uD83E\uDD1D', event: 'click_link_hire_me', labelKey: 'link.hire', fallbackLabel: 'Hire me as a full-stack dev or product manager', url: 'https://jobs.employmenthero.com/user/bintang-tobing-ZeKHvw', title: 'Hire Bintang Tobing as a full-stack web developer or product manager' },
-      { icon: '\uD83C\uDF93', event: 'click_link_certifications', labelKey: 'link.certs', fallbackLabel: 'Licenses & Certifications', url: 'https://coursera.org/learner/bintang-tobing', title: 'Bintang Tobing certifications on Coursera' },
+      { icon: 'in', event: 'click_link_linkedin', me: true, label: 'LinkedIn', url: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn' },
+      { icon: '\u270D', event: 'click_link_freelance', me: true, labelKey: 'link.freelance', fallbackLabel: 'Freelance Projects', url: 'https://www.upwork.com/freelancers/~01981e16848fe1eecf', title: 'Hire Bintang Tobing on Upwork' },
+      { icon: '\uD83E\uDD1D', event: 'click_link_hire_me', me: true, labelKey: 'link.hire', fallbackLabel: 'Hire me as a full-stack dev or product manager', url: 'https://jobs.employmenthero.com/user/bintang-tobing-ZeKHvw', title: 'Hire Bintang Tobing as a full-stack web developer or product manager' },
+      { icon: '\uD83C\uDF93', event: 'click_link_certifications', me: true, labelKey: 'link.certs', fallbackLabel: 'Licenses & Certifications', url: 'https://coursera.org/learner/bintang-tobing', title: 'Bintang Tobing certifications on Coursera' },
     ],
   },
   {
     labelKey: 'group.code',
     groupName: 'Code & Writing',
     links: [
-      { icon: '</>', event: 'click_link_github', labelKey: 'link.github', fallbackLabel: 'GitHub', url: 'https://github.com/bintangjtobing', title: 'Bintang Tobing GitHub profile and repositories', thumbnail: true, thumbSrc: thumbGithub, thumbAlt: 'Bintang Tobing GitHub profile preview' },
-      { icon: '\u270E', event: 'click_link_press', label: 'Press / Blog', url: 'https://press.bintangtobing.com', title: 'Bintang Tobing blog and press articles' },
-      { icon: '\uD83C\uDF10', event: 'click_link_website', labelKey: 'link.website', fallbackLabel: 'Personal Website', url: 'https://bintangtobing.com', title: 'Bintang Tobing personal website' },
+      { icon: '</>', event: 'click_link_github', me: true, labelKey: 'link.github', fallbackLabel: 'GitHub', url: 'https://github.com/bintangjtobing', title: 'Bintang Tobing GitHub profile and repositories', thumbnail: true, thumbSrc: thumbGithub, thumbAlt: 'Bintang Tobing GitHub profile preview' },
+      { icon: '\u270E', event: 'click_link_press', me: true, label: 'Press / Blog', url: 'https://press.bintangtobing.com', title: 'Bintang Tobing blog and press articles' },
+      { icon: '\uD83C\uDF10', event: 'click_link_website', me: true, labelKey: 'link.website', fallbackLabel: 'Personal Website', url: 'https://bintangtobing.com', title: 'Bintang Tobing personal website' },
     ],
   },
   {
     labelKey: 'group.social',
     groupName: 'Social',
     links: [
-      { icon: '\uD83D\uDCF7', event: 'click_link_instagram', label: 'Instagram', url: 'https://instagram.com/bcjlt', title: 'Bintang Tobing on Instagram @bcjlt', thumbnail: true, thumbSrc: thumbInstagram, thumbAlt: 'Bintang Tobing Instagram profile preview' },
-      { icon: '\u266B', event: 'click_link_tiktok', label: 'TikTok', url: 'https://www.tiktok.com/@tatangkatanyaa', title: 'Bintang Tobing on TikTok @tatangkatanyaa' },
+      { icon: '\uD83D\uDCF7', event: 'click_link_instagram', me: true, label: 'Instagram', url: 'https://instagram.com/bcjlt', title: 'Bintang Tobing on Instagram @bcjlt', thumbnail: true, thumbSrc: thumbInstagram, thumbAlt: 'Bintang Tobing Instagram profile preview' },
+      { icon: '\u266B', event: 'click_link_tiktok', me: true, label: 'TikTok', url: 'https://www.tiktok.com/@tatangkatanyaa', title: 'Bintang Tobing on TikTok @tatangkatanyaa' },
       { icon: '\uD83D\uDCB0', event: 'click_link_bitunix', labelKey: 'link.earn', fallbackLabel: 'Earning Opportunity', url: 'https://www.bitunix.com/register?inviteCode=ab9nr3&utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=bitunix-earn&utm_content=links-page', title: 'Earning opportunity via Bitunix' },
     ],
   },
@@ -88,7 +97,7 @@ export default function Links() {
         title="Bintang Tobing | Links"
         description="All professional, social, and personal links for Bintang Tobing. Connect on LinkedIn, GitHub, Instagram, and more."
         path="/links"
-        schemas={[linksSchema]}
+        schemas={[personSchema, linksSchema, breadcrumbSchema]}
       />
 
       <Link to="/" className="back" title="Back to Bintang Tobing homepage">
@@ -130,7 +139,7 @@ export default function Links() {
                         key={link.url}
                         href={link.url}
                         target="_blank"
-                        rel="noopener"
+                        rel={link.me ? 'me noopener' : 'noopener'}
                         title={link.title}
                         className={`link-item link-item-thumb fade-in fd${d}`}
                         onClick={() => handleClick(link.event, group.groupName, link.url)}
@@ -159,7 +168,7 @@ export default function Links() {
                       key={link.url}
                       href={link.url}
                       target={link.external === false ? undefined : '_blank'}
-                      rel={link.external === false ? undefined : 'noopener'}
+                      rel={link.external === false ? undefined : (link.me ? 'me noopener' : 'noopener')}
                       title={link.title}
                       className={`link-item fade-in fd${d}`}
                       onClick={() => handleClick(link.event, group.groupName, link.url)}
