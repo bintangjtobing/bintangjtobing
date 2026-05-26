@@ -2,6 +2,11 @@
  * Event tracking utility
  * Google Analytics 4: G-DF2X2QR346
  * Microsoft Clarity: ofg8k8jiyr
+ *
+ * Detailed model: every action emits a specific, self-descriptive GA4 event
+ * name (e.g. click_hero_linkedin, view_section_projects, toggle_theme_dark)
+ * so events are readable in GA4 directly, without breaking down by label.
+ * Extra context rides along as parameters.
  */
 
 function gtag() {
@@ -10,65 +15,31 @@ function gtag() {
   }
 }
 
-// ── Core events ──
+// Low-level: emit a specific event by name with optional params.
+export function trackEvent(eventName, params = {}) {
+  gtag('event', eventName, params);
+}
 
 export function trackPageView(page, title) {
-  gtag('event', 'page_view', {
-    page_path: page,
-    page_title: title,
-  });
+  gtag('event', 'page_view', { page_path: page, page_title: title });
 }
 
-export function trackOutboundLink(url, label) {
-  gtag('event', 'click', {
-    event_category: 'outbound',
-    event_label: label,
-    transport_type: 'beacon',
-    link_url: url,
-  });
-}
-
+// 'experience' -> view_section_experience
 export function trackSectionView(sectionId) {
-  gtag('event', 'section_view', {
-    event_category: 'engagement',
-    event_label: sectionId,
-  });
+  gtag('event', `view_section_${sectionId}`, { section_name: sectionId });
 }
 
+// 'dark' -> toggle_theme_dark
 export function trackThemeToggle(theme) {
-  gtag('event', 'theme_toggle', {
-    event_category: 'preference',
-    event_label: theme,
-  });
+  gtag('event', `toggle_theme_${theme}`, { theme });
 }
 
+// 'id' -> switch_lang_id
 export function trackLanguageSwitch(lang) {
-  gtag('event', 'language_switch', {
-    event_category: 'preference',
-    event_label: lang,
-  });
+  gtag('event', `switch_lang_${lang}`, { language: lang });
 }
 
-export function trackCtaClick(ctaName, destination) {
-  gtag('event', 'cta_click', {
-    event_category: 'conversion',
-    event_label: ctaName,
-    link_url: destination,
-  });
-}
-
-export function trackLinksPageClick(groupName, linkLabel, url) {
-  gtag('event', 'links_click', {
-    event_category: 'links_page',
-    event_label: `${groupName} / ${linkLabel}`,
-    link_url: url,
-  });
-}
-
+// 75 -> scroll_75
 export function trackScrollDepth(percent) {
-  gtag('event', 'scroll_depth', {
-    event_category: 'engagement',
-    event_label: `${percent}%`,
-    value: percent,
-  });
+  gtag('event', `scroll_${percent}`, { percent, value: percent });
 }

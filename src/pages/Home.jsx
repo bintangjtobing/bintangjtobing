@@ -5,7 +5,7 @@ import Controls from '../components/Controls';
 import StickyNav from '../components/StickyNav';
 import VerifiedBadge from '../components/VerifiedBadge';
 import Reveal from '../components/Reveal';
-import { trackPageView, trackOutboundLink, trackCtaClick, trackScrollDepth } from '../utils/tracking';
+import { trackPageView, trackEvent, trackScrollDepth } from '../utils/tracking';
 import photo from '../assets/photo.webp';
 
 const experiences = [
@@ -83,11 +83,11 @@ const certs = [
 ];
 
 const heroLinks = [
-  { label: 'Email', href: 'mailto:hello@bintangtobing.com?cc=bintangjtobing@gmail.com', title: 'Send email to Bintang Tobing', track: 'email' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn', track: 'linkedin' },
-  { label: 'GitHub', href: 'https://github.com/bintangjtobing', title: 'Bintang Tobing on GitHub', track: 'github' },
-  { label: 'Press', href: 'https://press.bintangtobing.com', title: 'Bintang Tobing Blog & Press', track: 'press' },
-  { label: 'Website', href: 'https://bintangtobing.com', title: 'Bintang Tobing Personal Website', track: 'website' },
+  { label: 'Email', href: 'mailto:hello@bintangtobing.com?cc=bintangjtobing@gmail.com', title: 'Send email to Bintang Tobing', event: 'click_hero_email' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn', event: 'click_hero_linkedin' },
+  { label: 'GitHub', href: 'https://github.com/bintangjtobing', title: 'Bintang Tobing on GitHub', event: 'click_hero_github' },
+  { label: 'Press', href: 'https://press.bintangtobing.com', title: 'Bintang Tobing Blog & Press', event: 'click_hero_press' },
+  { label: 'Website', href: 'https://bintangtobing.com', title: 'Bintang Tobing Personal Website', event: 'click_hero_website' },
 ];
 
 export default function Home() {
@@ -118,8 +118,8 @@ export default function Home() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleLinkClick = (label, href) => {
-    trackOutboundLink(href, label);
+  const handleLinkClick = (eventName, href) => {
+    trackEvent(eventName, { link_url: href, location: 'hero' });
   };
 
   return (
@@ -152,13 +152,13 @@ export default function Home() {
 
           <ul className="hero-links hero-enter hero-enter-d3">
             {heroLinks.map(link => (
-              <li key={link.track}>
+              <li key={link.event}>
                 <a
                   href={link.href}
                   target={link.href.startsWith('mailto') ? undefined : '_blank'}
                   rel={link.href.startsWith('mailto') ? undefined : 'noopener'}
                   title={link.title}
-                  onClick={() => handleLinkClick(link.track, link.href)}
+                  onClick={() => handleLinkClick(link.event, link.href)}
                 >
                   {link.label}
                 </a>
@@ -208,7 +208,7 @@ export default function Home() {
             rel="noopener"
             title="View Bintang Tobing's project portfolio and case studies"
             className="portfolio-cta"
-            onClick={() => trackCtaClick('portfolio', 'https://cirrus-hub.net/portfolio')}
+            onClick={() => trackEvent('click_cta_portfolio', { link_url: 'https://cirrus-hub.net/portfolio', location: 'projects' })}
           >
             <div className="portfolio-cta-text">
               <span className="portfolio-cta-title">{t('cta.title')}</span>

@@ -2,15 +2,20 @@
 
 > Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist
 
-Bintang Tobing is a results-driven professional with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development across fintech, manufacturing, and government sectors.
+Bintang Tobing is a Full-Stack Developer and Marketing Technology Leader with 9+ years building and shipping production systems across fintech, ERP, manufacturing, and government sectors. Platforms delivered are used by 500+ businesses.
 
 ## Current Role
-Marketing and Technology Manager at Bitunix Fintech LLC, United Arab Emirates (Feb 2025 - Present)
+Marketing and Technology Manager at Bitunix Fintech LLC, United Arab Emirates (Feb 2025 - May 2026)
+
+## Recent Flagship Work
+- KlindrOS: 26-module MarTech intelligence platform, 1.55B events/day pipeline (Laravel 11 + Next.js 16 + Expo)
+- Bitunix MarTech Dashboard: unified GSC + GA4 (BigQuery) + Partner Portal into a 9-stage conversion funnel
+- PMHelper: solo-built PM platform with a Claude-compatible MCP server (14 tools)
 
 ## Core Expertise
-- AI Integration & Automation (Anthropic Claude, OpenAI, n8n)
-- Marketing Technology (GA4, Meta Business Suite, TikTok Ads, CRM)
-- Full-Stack Development (React.js, Node.js, Laravel, React Native)
+- AI Integration & Automation (Anthropic Claude, OpenAI GPT-4o, MCP, n8n)
+- Marketing Technology (GA4, BigQuery, Meta Business Suite, TikTok Ads, CRM)
+- Full-Stack Development (React.js, Next.js, Node.js, Laravel, React Native, Expo)
 - Project & Product Management (Agile/Scrum, ERP Systems)
 
 ## Contact

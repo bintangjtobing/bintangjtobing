@@ -12,19 +12,22 @@
 - GitHub: https://github.com/bintangjtobing
 - Blog: https://press.bintangtobing.com
 - Instagram: https://instagram.com/bcjlt
+- TikTok: https://www.tiktok.com/@tatangkatanyaa
+- Upwork: https://www.upwork.com/freelancers/~01981e16848fe1eecf
+- Hire (full-time): https://jobs.employmenthero.com/user/bintang-tobing-ZeKHvw
 - Languages: Indonesian (Native), English (Professional Working Proficiency)
 
 ## Professional Summary
-Results-driven Marketing Technology Leader with 9+ years of expertise in AI-powered automation, growth engineering, and data-driven product development. Proven track record of delivering measurable business impact: 18% CTR increase, 36% traffic growth, 90% reduction in manual effort through AI orchestration (Anthropic Claude, OpenAI GPT), and 35.4% efficiency improvements. Expert in building intelligent marketing ecosystems using n8n automation, advanced analytics platforms, and full-stack development across fintech, manufacturing, and government sectors.
+Full-Stack Developer and Marketing Technology Leader with 9+ years building and shipping production systems across fintech, ERP, manufacturing, and government sectors. Delivered platforms used by 500+ businesses. Recent work includes KlindrOS (a 26-module MarTech intelligence platform with a 1.55B events/day pipeline), the Bitunix MarTech Dashboard, and PMHelper with a self-built Claude-compatible MCP server. Proven impact: 293 to 1,791 campaigns surfaced, 56% affiliate signups recovered, 90% reduction in manual content effort via AI orchestration (Anthropic Claude, OpenAI GPT), and 35.4% efficiency improvements.
 
 ## Professional Experience
 
 ### Marketing and Technology Manager
-Bitunix Fintech LLC, United Arab Emirates | February 2025 - Present
-- Architected a comprehensive MarTech stack integrating CRM systems, Google Analytics 4, Meta Business Suite, TikTok Ads Manager, and Twitter Ads with automated UTM tracking and multi-channel attribution
-- Developed real-time analytics dashboards; implemented A/B testing and CRO experiments for enhanced campaign ROI
-- Led customer support operations, optimizing workflows for high satisfaction rates
-- Integrated emerging AI tools (Anthropic Claude, OpenAI) to automate workflows and drive operational efficiency
+Bitunix Fintech LLC, United Arab Emirates | February 2025 - May 2026
+- Built the Bitunix MarTech Dashboard (Laravel 13, Next.js 16, PostgreSQL, Redis, BigQuery) unifying Google Search Console, GA4, and the Partner Portal into a 9-stage conversion funnel
+- Diagnosed a silent GA4 pagination bug; campaign visibility expanded from 293 to 1,791 source/medium/campaign combinations, and recovered 56% of undercounted affiliate signups via a Partner API fix
+- Built a GPT-4o AI report generator (EN/ID/ZH) with PDF/DOCX export, eliminating 8+ hours/week of manual reporting
+- Integrated Anthropic Claude and OpenAI into 3 internal workflows, cutting manual content production effort by 75%
 
 ### Project Manager
 Parla Consultancy Sdn Bhd, Kuala Lumpur | June 2024 - April 2025
@@ -39,14 +42,14 @@ PT Dinamik Mobile (iPay88), Jakarta | June - November 2024
 - Optimized site functionality, performance, and system reliability
 
 ### Product Owner & Mobile App Developer
-PT Boxity Central Indonesia, Jakarta | March 2019 - November 2023
+PT Boxity Central Indonesia, Jakarta | March 2021 - November 2023
 - Spearheaded ERP platform development from 3 to 7 core modules serving 500+ MSMEs across Indonesia
 - Built 4 React Native mobile applications: warehouse tracking, inter-warehouse transactions, attendance monitoring, and financial reporting
 - Established CI/CD pipelines using GitHub; conducted UAT and penetration testing
 - Built strategic partnerships with policymakers; represented company at industry events
 
 ### Full Stack Web Developer & Project Manager
-PT Benua Solusi Teknologi, Jakarta | September 2016 - October 2023
+PT Benua Solusi Teknologi, Jakarta | September 2018 - October 2023
 - Managed end-to-end client projects; developed web apps for insurance data processing and CARE Tech systems
 - Built frontend (React.js) and backend (Node.js, Laravel) with database integration and server administration
 - Implemented security measures, maintained server integrity, and resolved system vulnerabilities
@@ -58,34 +61,43 @@ Digital Envision Pty. Ltd, Sydney, Australia | November 2020 - February 2021
 
 ## Key Projects & Impact
 
-### Cirrus Crypto Platform
-End-to-end signal broadcasting system with AI-powered analysis, VIP membership, and multi-language blog. Reduced content creation time by 90% with automated translation across 5+ languages.
+### KlindrOS
+Multi-tenant marketing intelligence platform with 26 modules: multi-touch attribution, ROI engine, CDP, AppsFlyer mobile attribution, and GPT-4o AI insights. Web, iOS, and Android. Anchored Viu (regional OTT) as launch client. 1.55B events/day pipeline, 294-endpoint OpenAPI spec. Built with Laravel 11 + Next.js 16 + Expo.
 
-### URL Shortener & Campaign Analytics Platform
-Full-stack intelligent link management system with AI-assisted UTM automation and real-time analytics. Achieved 18% CTR increase (Duhani Capital) and 36% traffic growth (Bitunix.io).
+### Bitunix MarTech Dashboard
+Internal MarTech analytics platform unifying Google Search Console, GA4 (BigQuery), and the Bitunix Partner Portal into a 9-stage conversion funnel. Built a GPT-4o report generator in EN/ID/ZH. Surfaced 293 to 1,791 campaigns and recovered 56% of undercounted affiliate signups.
+
+### PMHelper
+Production PM platform built and operated solo: 40+ versioned releases in ~2 months. Real-time Kanban, 1-on-1 messenger with embedded Jitsi calls and AI meeting summaries, RBAC (6 roles, 69 permissions), and a Claude-compatible MCP server (14 tools). REST API with 37 endpoints. Built with Expo + Laravel + MCP.
+
+### Cirrus Crypto Platform
+End-to-end signal broadcasting system with AI-powered analysis, VIP membership tiers, and a multi-language blog with automated translation across 5+ languages. Reduced content creation time by 90%.
+
+### AI Marketing Extension (URL Shortener & Campaign Analytics)
+Full-stack intelligent link management system with AI-assisted UTM automation and real-time analytics integration. Achieved 18% CTR increase and 36% traffic growth.
 
 ### YouTube-to-Twitter Automation Platform
-Intelligent content automation system integrating YouTube API, Anthropic Claude, OpenAI, and Twitter API via n8n. Reduced manual content creation effort by 90%.
-
-### PM Helper Platform
-Comprehensive project management system with Kanban/Scrum boards, sprint management, time tracking, and roadmap visualization.
+Intelligent content automation system integrating YouTube API, Anthropic Claude, OpenAI, and Twitter API via n8n workflows. Reduced manual content creation effort by 90%.
 
 ### ERP Platform (Boxity)
-Scaled from 3 to 7 core modules including warehouse management, financial reporting, attendance tracking, and inter-warehouse transactions. Serving 500+ MSMEs with React Native, Laravel, and Node.js.
+Scaled from 3 to 7 core modules including warehouse management, financial reporting, attendance tracking, and inter-warehouse transactions. Serving 500+ MSMEs with React Native and Laravel.
 
 ### PT DHK Manufacturing Optimization
-Customized warehouse and production management application. Achieved 35.4% efficiency increase in goods-receiving processes (2023-2024).
+Customized warehouse and production management application for manufacturing operations. Achieved 35.4% efficiency increase.
 
 ### Kareya Interior Digital Strategy
-SEO-focused content marketing and lead generation systems. Delivered 250% website traffic increase and 180% growth in qualified leads for premium villa developments.
+SEO-focused content marketing and lead generation systems for premium villa developments. Delivered 250% website traffic increase and 180% growth in qualified leads.
 
 ## Technical Skills
-- AI & Automation: Anthropic Claude API, OpenAI GPT API, n8n Workflow Automation, Automa, Prompt Engineering, AI Pipeline Architecture
-- Marketing Technology: Google Analytics 4, Meta Business Suite, TikTok Ads Manager, Twitter Ads, CRM Integration, UTM Tracking, Multi-channel Attribution, A/B Testing, Conversion Rate Optimization
-- Programming & Frameworks: JavaScript, TypeScript, Python, PHP, React.js, Vue.js, Node.js, Laravel, React Native, Flutter, Next.js
-- Development Tools: Git, GitHub, Docker, CI/CD Pipelines, WordPress, Figma, Photoshop, Chrome Extension API
-- Databases & Infrastructure: MySQL, SQL Server, MongoDB, Server Administration, API Integration, REST APIs
-- Project Management: Agile/Scrum Methodologies, Kanban, Sprint Planning, Risk Management, Budgeting, Stakeholder Communication, SAP Analytics Cloud
+- AI & Automation: Anthropic Claude API, OpenAI GPT-4o, MCP (Model Context Protocol), n8n Workflow Automation, Prompt Engineering, AI Pipeline Architecture
+- Programming: JavaScript, TypeScript, Python, PHP
+- Frontend: React.js, Next.js, Vue.js, React Native, Expo, Flutter, TailwindCSS, shadcn/ui, Alpine.js
+- Backend: Node.js, Laravel, Filament, Livewire, REST API, GraphQL
+- Databases: PostgreSQL, MySQL, SQL Server, MongoDB, Redis
+- Real-Time & Data: Pusher Channels, Jitsi Meet (self-hosted), Laravel Horizon, BigQuery
+- Marketing Technology: Google Analytics 4, Meta Business Suite, TikTok Ads, Twitter Ads, CRM, UTM Tracking, A/B Testing, Conversion Rate Optimization
+- DevOps & Infrastructure: Git, GitHub, Docker, CI/CD, Nginx, PM2, Let's Encrypt, fail2ban, Server Administration
+- Tools: Vite, WordPress, Figma, Photoshop, Chrome Extension API
 
 ## Awards & Recognition
 - Top 250 Global Startups - Slingshot 2022 Deep Tech Startup Competition, Singapore
@@ -97,7 +109,7 @@ SEO-focused content marketing and lead generation systems. Delivered 250% websit
 ## Certifications
 - IBM IT Project Manager Specialization - IBM & SkillUp EdTech (2025)
 - Google Project Management Professional Certificate - Google (2024)
-- ASEAN Data Science Explorers - SAP Analytics Cloud & SAP Build Apps - ASEAN Foundation (2024)
+- ASEAN Data Science Explorers - SAP Analytics Cloud, ASEAN Foundation (2024)
 - Cyber Security Certification - habiskerja.com (2022)
 - Front-end Web Development Quantum Degree - Next Academy, Kuala Lumpur (2019)
 

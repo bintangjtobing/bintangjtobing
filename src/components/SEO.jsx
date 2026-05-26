@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://bintangtobing.com';
-const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const OG_IMAGE = `${SITE_URL}/og-image.jpg?v=2`;
 
 const personSchema = {
   '@context': 'https://schema.org',
