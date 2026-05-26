@@ -57,21 +57,6 @@ export function trackCtaClick(ctaName, destination) {
   });
 }
 
-export function trackSocialClick(platform, url) {
-  gtag('event', 'social_click', {
-    event_category: 'social',
-    event_label: platform,
-    link_url: url,
-  });
-}
-
-export function trackResumeDownload() {
-  gtag('event', 'resume_download', {
-    event_category: 'conversion',
-    event_label: 'resume_pdf',
-  });
-}
-
 export function trackLinksPageClick(groupName, linkLabel, url) {
   gtag('event', 'links_click', {
     event_category: 'links_page',

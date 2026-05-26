@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Controls from '../components/Controls';
 import VerifiedBadge from '../components/VerifiedBadge';
 import { trackPageView, trackLinksPageClick } from '../utils/tracking';
-import photo from '../assets/photo.jpg';
+import photo from '../assets/photo.webp';
 import thumbCirrus from '../assets/thumbs/cirrus.jpg';
 import thumbGithub from '../assets/thumbs/github.jpg';
 import thumbInstagram from '../assets/thumbs/instagram.jpg';
@@ -18,6 +18,7 @@ const linksSchema = {
   description: 'All professional, social, and personal links for Bintang Tobing.',
   url: 'https://bintangtobing.com/links',
   author: { '@type': 'Person', name: 'Bintang Tobing' },
+  publisher: { '@type': 'Person', name: 'Bintang Tobing', url: 'https://bintangtobing.com' },
 };
 
 const linkGroups = [

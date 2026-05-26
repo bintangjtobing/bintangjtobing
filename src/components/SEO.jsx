@@ -72,6 +72,7 @@ const websiteSchema = {
   url: SITE_URL,
   description: 'Personal website of Bintang Tobing, Marketing Technology Leader, Full-Stack Developer & AI Integration Specialist.',
   author: { '@type': 'Person', name: 'Bintang Tobing' },
+  publisher: { '@type': 'Person', name: 'Bintang Tobing', url: SITE_URL },
   inLanguage: ['en', 'id'],
 };
 
@@ -91,6 +92,7 @@ export default function SEO({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="author" content="Bintang Tobing" />
+      <meta name="publisher" content="Bintang Tobing" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="keywords" content="Bintang Tobing, Marketing Technology, Full-Stack Developer, AI Integration, Software Engineer, React.js, Node.js, Laravel, n8n, Anthropic Claude, OpenAI, MarTech" />
 
@@ -100,8 +102,9 @@ export default function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:height" content="1200" />
       <meta property="og:image:alt" content="Bintang Tobing - Marketing Technology & Full-Stack Developer" />
       <meta property="og:site_name" content="Bintang Tobing" />
       <meta property="og:locale" content="en_US" />

@@ -6,7 +6,7 @@ import StickyNav from '../components/StickyNav';
 import VerifiedBadge from '../components/VerifiedBadge';
 import Reveal from '../components/Reveal';
 import { trackPageView, trackOutboundLink, trackCtaClick, trackScrollDepth } from '../utils/tracking';
-import photo from '../assets/photo.jpg';
+import photo from '../assets/photo.webp';
 
 const experiences = [
   {

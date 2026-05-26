@@ -1,9 +1,10 @@
 export default function VerifiedBadge({ className = 'verified-badge' }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 12l2 2 4-4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M12 1l2.09 3.07L17.5 3.5l-.57 3.43L20 9.09l-2.62 2.09.54 3.44-3.19 1.25L12 19l-2.73-3.13-3.19-1.25.54-3.44L4 9.09l3.07-2.16-.57-3.43 3.41.57L12 1z" fill="var(--blue)" stroke="var(--blue)" strokeWidth="1.5"/>
-      <path d="M9 12l2 2 4-4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <svg className={className} viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Shield (theme accent blue) */}
+      <path d="M434.068,46.758L314.607,9.034C295.648,3.047,275.883,0,256,0s-39.648,3.047-58.607,9.034L77.932,46.758C52.97,54.641,36,77.796,36,103.973v207.39c0,38.129,18.12,73.989,48.816,96.607l117.032,86.234C217.537,505.764,236.513,512,256,512s38.463-6.236,54.152-17.796l117.032-86.234C457.88,385.352,476,349.492,476,311.363v-207.39C476,77.796,459.03,54.641,434.068,46.758z" fill="var(--blue)"/>
+      {/* Check mark (white) */}
+      <path d="M347.924,227.716l-98.995,98.995c-11.716,11.716-30.711,11.716-42.426,0l-42.427-42.426c-11.716-11.716-11.716-30.711,0-42.426l0,0c11.716-11.716,30.711-11.716,42.426,0l21.213,21.213l77.782-77.782c11.716-11.716,30.711-11.716,42.426,0h0C359.64,197.005,359.64,216,347.924,227.716z" fill="#fff"/>
     </svg>
   );
 }
