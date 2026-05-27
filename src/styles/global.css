@@ -85,13 +85,12 @@ a { color: inherit; text-decoration: none; }
   border-radius: 50%;
   background: #fafafa;
   cursor: pointer;
-  overflow: hidden;
   position: relative;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .ab-fab:hover { transform: translateY(-3px) scale(1.04); }
-.ab-fab img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.ab-fab img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; border-radius: 50%; }
 .ab-dot {
   position: absolute;
   bottom: 4px;
@@ -218,6 +217,9 @@ a { color: inherit; text-decoration: none; }
 }
 .chat-msg-bot { align-self: flex-start; background: var(--pill-bg); color: var(--fg); border-bottom-left-radius: 4px; }
 .chat-msg-user { align-self: flex-end; background: var(--blue); color: #fff; border-bottom-right-radius: 4px; }
+.chat-msg a { text-decoration: underline; word-break: break-word; }
+.chat-msg-bot a { color: var(--blue); }
+.chat-msg-user a { color: #fff; }
 
 .chat-suggestions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.2rem; }
 .chat-chip {

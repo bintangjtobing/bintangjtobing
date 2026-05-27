@@ -8,6 +8,10 @@ const SESSION_ENDPOINT = '/api/session';
 // Launcher bubble greetings, cycled every 5s.
 const GREETINGS = ['Hi there', 'Hello!', 'Halo!', 'Ask me anything', 'Tanya aku, yuk', 'Hey!'];
 
+// Chat history + language persisted in the browser for 24h.
+const STORE_KEY = 'askbintang_chat_v1';
+const DAY_MS = 24 * 60 * 60 * 1000;
+
 // Strip stray markdown so replies render as clean plain text (no asterisks/headers).
 const clean = (s) =>
   s
@@ -15,6 +19,31 @@ const clean = (s) =>
     .replace(/__(.*?)__/g, '$1')
     .replace(/^#{1,6}\s+/gm, '')
     .replace(/^\s*\*\s+/gm, '- ');
+
+// Turn cleaned text into React nodes with clickable links: markdown links
+// [label](url), bare URLs, and email addresses.
+const LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s)]+)|([\w.+-]+@[\w.-]+\.[a-zA-Z]{2,})/g;
+const linkify = (text) => {
+  const nodes = [];
+  let last = 0;
+  let k = 0;
+  let m;
+  LINK_RE.lastIndex = 0;
+  while ((m = LINK_RE.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    if (m[1] && m[2]) {
+      nodes.push(<a key={k++} href={m[2]} target="_blank" rel="noopener noreferrer">{m[1]}</a>);
+    } else if (m[3]) {
+      const url = m[3].replace(/[.,;:]+$/, '');
+      nodes.push(<a key={k++} href={url} target="_blank" rel="noopener noreferrer">{url}</a>);
+    } else if (m[4]) {
+      nodes.push(<a key={k++} href={`mailto:${m[4]}`}>{m[4]}</a>);
+    }
+    last = LINK_RE.lastIndex;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+};
 
 const COPY = {
   en: {
@@ -55,6 +84,34 @@ export default function ChatWidget() {
     const id = setInterval(() => setGreet((gi) => (gi + 1) % GREETINGS.length), 5000);
     return () => clearInterval(id);
   }, [open]);
+
+  // Restore chat history + language for 24h (per browser).
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) return;
+      const saved = JSON.parse(raw);
+      if (saved.savedAt && Date.now() - saved.savedAt < DAY_MS) {
+        if (Array.isArray(saved.messages)) setMessages(saved.messages);
+        if (saved.lang) setLang(saved.lang);
+      } else {
+        localStorage.removeItem(STORE_KEY);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  // Persist chat history + language (expires on read after 24h).
+  useEffect(() => {
+    try {
+      if (messages.length || lang) {
+        localStorage.setItem(STORE_KEY, JSON.stringify({ messages, lang, savedAt: Date.now() }));
+      }
+    } catch {
+      /* ignore */
+    }
+  }, [messages, lang]);
 
   // On first open, load the per-IP cached language (24h). If none, show the picker.
   useEffect(() => {
@@ -218,7 +275,9 @@ export default function ChatWidget() {
                 )}
                 {messages.map((m, i) => (
                   <div key={i} className={`chat-msg ${m.role === 'user' ? 'chat-msg-user' : 'chat-msg-bot'}`}>
-                    {(m.role === 'assistant' ? clean(m.content) : m.content) || (busy && i === messages.length - 1 ? '…' : '')}
+                    {m.role === 'assistant'
+                      ? (m.content ? linkify(clean(m.content)) : (busy && i === messages.length - 1 ? '…' : ''))
+                      : m.content}
                   </div>
                 ))}
               </div>
