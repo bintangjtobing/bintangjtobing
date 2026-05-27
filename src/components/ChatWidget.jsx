@@ -1,8 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 import { trackEvent } from '../utils/tracking';
+import avatar from '../assets/askbintang.webp';
 
 const CHAT_ENDPOINT = '/api/chat';
 const SESSION_ENDPOINT = '/api/session';
+
+// Launcher bubble greetings, cycled every 5s.
+const GREETINGS = ['Hi there', 'Hello!', 'Halo!', 'Ask me anything', 'Tanya aku, yuk', 'Hey!'];
 
 // Strip stray markdown so replies render as clean plain text (no asterisks/headers).
 const clean = (s) =>
@@ -42,7 +46,15 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState([]); // { role, content }
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
+  const [greet, setGreet] = useState(0);
   const bodyRef = useRef(null);
+
+  // Cycle the launcher greeting every 5s while the chat is closed.
+  useEffect(() => {
+    if (open) return undefined;
+    const id = setInterval(() => setGreet((gi) => (gi + 1) % GREETINGS.length), 5000);
+    return () => clearInterval(id);
+  }, [open]);
 
   // On first open, load the per-IP cached language (24h). If none, show the picker.
   useEffect(() => {
@@ -137,25 +149,36 @@ export default function ChatWidget() {
   return (
     <>
       {!open && (
-        <button
-          className="chat-fab"
-          onClick={() => { setOpen(true); trackEvent('chatbot_open'); }}
-          aria-label="Chat with Bintang"
-          title="Chat with Bintang"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-          </svg>
-          <span>Chat with Bintang</span>
-        </button>
+        <div className="ab-launcher">
+          <div
+            className="ab-bubble"
+            key={greet}
+            onClick={() => { setOpen(true); trackEvent('chatbot_open'); }}
+            role="presentation"
+          >
+            {GREETINGS[greet]}
+          </div>
+          <button
+            className="ab-fab"
+            onClick={() => { setOpen(true); trackEvent('chatbot_open'); }}
+            aria-label="#AskBintang, chat with Bintang"
+            title="#AskBintang"
+          >
+            <img src={avatar} alt="Bintang Tobing avatar" />
+            <span className="ab-dot" />
+          </button>
+        </div>
       )}
 
       {open && (
         <div className="chat-panel" role="dialog" aria-label="Chat with Bintang">
           <div className="chat-header">
-            <div>
-              <p className="chat-title">{lang ? t.title : 'Chat with Bintang (AI)'}</p>
-              <p className="chat-subtitle">{lang ? t.subtitle : 'Pilih bahasa / Choose language'}</p>
+            <div className="chat-head-left">
+              <img className="chat-head-avatar" src={avatar} alt="" />
+              <div>
+                <p className="chat-title">#AskBintang</p>
+                <p className="chat-subtitle">{lang ? t.subtitle : 'Pilih bahasa / Choose language'}</p>
+              </div>
             </div>
             <button className="chat-close" onClick={() => setOpen(false)} aria-label="Close chat">&times;</button>
           </div>

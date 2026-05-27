@@ -1,0 +1,14 @@
+{
+  "name": "Bintang Tobing",
+  "short_name": "Bintang",
+  "description": "Product & Project Manager and Full-Stack Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFA",
+  "theme_color": "#FDFCFA",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/maskable-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
