@@ -72,9 +72,19 @@ export default function ChatWidget() {
     if (el) el.scrollTop = el.scrollHeight;
   }, [messages, open, lang]);
 
+  const openChat = (source) => {
+    setOpen(true);
+    trackEvent('chatbot_open', { source });
+  };
+
+  const closeChat = () => {
+    setOpen(false);
+    trackEvent('chatbot_close');
+  };
+
   const chooseLang = (l) => {
     setLang(l);
-    trackEvent('chatbot_lang', { lang: l });
+    trackEvent('chatbot_lang_select', { lang: l });
     fetch(SESSION_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -84,14 +94,14 @@ export default function ChatWidget() {
 
   const t = COPY[lang] || COPY.en;
 
-  const send = async (text) => {
+  const send = async (text, source = 'typed') => {
     const content = (text ?? input).trim();
     if (!content || busy) return;
     setInput('');
     const history = [...messages, { role: 'user', content }];
     setMessages([...history, { role: 'assistant', content: '' }]);
     setBusy(true);
-    trackEvent('chatbot_message', { length: content.length, lang });
+    trackEvent('chatbot_message_sent', { source, length: content.length, lang });
 
     try {
       const res = await fetch(CHAT_ENDPOINT, {
@@ -135,7 +145,9 @@ export default function ChatWidget() {
         }
       }
       if (!streamed) throw new Error('empty');
+      trackEvent('chatbot_reply_received', { lang });
     } catch {
+      trackEvent('chatbot_error', { lang });
       setMessages((prev) => {
         const copy = [...prev];
         copy[copy.length - 1] = { role: 'assistant', content: t.error };
@@ -153,14 +165,14 @@ export default function ChatWidget() {
           <div
             className="ab-bubble"
             key={greet}
-            onClick={() => { setOpen(true); trackEvent('chatbot_open'); }}
+            onClick={() => openChat('bubble')}
             role="presentation"
           >
             {GREETINGS[greet]}
           </div>
           <button
             className="ab-fab"
-            onClick={() => { setOpen(true); trackEvent('chatbot_open'); }}
+            onClick={() => openChat('avatar')}
             aria-label="#AskBintang, chat with Bintang"
             title="#AskBintang"
           >
@@ -180,7 +192,7 @@ export default function ChatWidget() {
                 <p className="chat-subtitle">{lang ? t.subtitle : 'Pilih bahasa / Choose language'}</p>
               </div>
             </div>
-            <button className="chat-close" onClick={() => setOpen(false)} aria-label="Close chat">&times;</button>
+            <button className="chat-close" onClick={closeChat} aria-label="Close chat">&times;</button>
           </div>
 
           {!lang ? (
@@ -199,7 +211,7 @@ export default function ChatWidget() {
                     <div className="chat-msg chat-msg-bot">{t.intro}</div>
                     <div className="chat-suggestions">
                       {t.suggestions.map((s) => (
-                        <button key={s} className="chat-chip" onClick={() => send(s)}>{s}</button>
+                        <button key={s} className="chat-chip" onClick={() => send(s, 'suggestion')}>{s}</button>
                       ))}
                     </div>
                   </>
