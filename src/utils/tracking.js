@@ -43,3 +43,20 @@ export function trackLanguageSwitch(lang) {
 export function trackScrollDepth(percent) {
   gtag('event', `scroll_${percent}`, { percent, value: percent });
 }
+
+// 'open' -> cv_menu_open, 'close' -> cv_menu_close
+export function trackCvMenu(state, params = {}) {
+  gtag('event', `cv_menu_${state}`, { state, ...params });
+}
+
+// 'fullstack' -> download_cv_fullstack (also fires a generic file_download for GA4 reporting)
+export function trackCvDownload(cvType, params = {}) {
+  const payload = { cv_type: cvType, ...params };
+  gtag('event', `download_cv_${cvType}`, payload);
+  // GA4 recommended event so all CV downloads roll up under one report too.
+  gtag('event', 'file_download', {
+    file_extension: 'pdf',
+    link_text: `CV ${cvType}`,
+    ...payload,
+  });
+}

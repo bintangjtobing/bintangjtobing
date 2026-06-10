@@ -574,6 +574,113 @@ nav .nav-links a:hover { color: var(--fg); }
 .hero-links a:hover { color: var(--fg); }
 .hero-links a:hover::after { width: 100%; }
 
+/* ── HERO CV DOWNLOAD ── */
+.hero-cv {
+  margin-top: 1.8rem;
+}
+
+.cv-download {
+  position: relative;
+  display: inline-block;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--cta-text);
+  background: var(--cta-bg);
+  border: 1px solid var(--cta-bg);
+  border-radius: 100px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.cv-download-btn:hover { background: var(--cta-bg-hover); border-color: var(--cta-bg-hover); }
+.cv-download-btn:active { transform: scale(0.98); }
+
+.cv-download-icon { width: 15px; height: 15px; flex-shrink: 0; }
+
+.cv-download-chevron {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-download.open .cv-download-chevron { transform: rotate(180deg); }
+
+.cv-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 0;
+  z-index: 50;
+  min-width: 280px;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.4rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
+  animation: cv-menu-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+@keyframes cv-menu-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cv-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.cv-menu-item:hover { background: var(--card-hover); }
+
+.cv-menu-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cv-menu-label {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
+.cv-menu-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.cv-menu-tag {
+  font-family: var(--heading);
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  background: var(--pill-bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  flex-shrink: 0;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
 /* ── EXPERIENCE ── */
 .exp-item { margin-bottom: 3.5rem; }
 .exp-item:last-child { margin-bottom: 0; }

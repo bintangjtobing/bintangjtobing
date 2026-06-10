@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import Controls from '../components/Controls';
 import StickyNav from '../components/StickyNav';
 import VerifiedBadge from '../components/VerifiedBadge';
+import CvDownload from '../components/CvDownload';
 import Reveal from '../components/Reveal';
 import { trackPageView, trackEvent, trackScrollDepth } from '../utils/tracking';
 import photo from '../assets/photo.webp';
@@ -173,6 +174,10 @@ export default function Home() {
               </li>
             ))}
           </ul>
+
+          <div className="hero-cv hero-enter hero-enter-d3">
+            <CvDownload />
+          </div>
         </div>
       </section>
 
