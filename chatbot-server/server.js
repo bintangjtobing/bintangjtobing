@@ -10,7 +10,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const {
   OPENAI_API_KEY,
-  OPENAI_MODEL = 'gpt-4o',
+  OPENAI_BASE_URL = 'https://api.z.ai/api/paas/v4',
+  OPENAI_MODEL = 'glm-5.2',
   PORT = 8787,
   ALLOWED_ORIGIN = 'https://bintangtobing.com',
   RATE_WINDOW_MIN = 10,
@@ -37,7 +38,7 @@ const knowledgeBase = rawKb
   .replaceAll('{PM_YEARS}', String(year - 2018));
 const SYSTEM_PROMPT = `${persona}\n\n---\n# KNOWLEDGE BASE (your only factual source)\n\n${knowledgeBase}`;
 
-const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
+const openai = new OpenAI({ apiKey: OPENAI_API_KEY, baseURL: OPENAI_BASE_URL });
 
 const app = express();
 app.set('trust proxy', 1); // behind nginx -> read real client IP from X-Forwarded-For

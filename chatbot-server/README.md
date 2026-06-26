@@ -1,14 +1,14 @@
 # Bintang Chatbot (server)
 
 Small Node proxy that powers the chat widget on bintangtobing.com. It holds the
-OpenAI API key (never exposed to the browser), injects the curated knowledge base
-+ guardrails as a system prompt, and streams GPT answers back over SSE.
+z.ai API key (never exposed to the browser), injects the curated knowledge base
++ guardrails as a system prompt, and streams GLM answers back over SSE.
 
 ## Files
 - `server.js` — Express proxy, streaming, rate limit, daily cap, origin guard
 - `system-prompt.md` — persona + hard guardrails (no phone/NIK/SARA/relationships)
 - `knowledge-base.md` — curated, public-safe facts (edit this to update what the bot knows)
-- `.env.example` — copy to `.env` and fill in `OPENAI_API_KEY`
+- `.env.example` — copy to `.env` and fill in `OPENAI_API_KEY` (your z.ai key)
 
 ## Deploy (server: root@72.60.133.130)
 ```bash
@@ -21,7 +21,7 @@ ssh root@72.60.133.130
 cd /var/www/bintang-chatbot
 npm ci --omit=dev          # or: npm install --omit=dev
 cp .env.example .env
-nano .env                  # paste real OPENAI_API_KEY, keep PORT=8787
+nano .env                  # paste real z.ai key as OPENAI_API_KEY, keep PORT=8787
 
 # 3. Start under PM2
 pm2 start ecosystem.config.cjs
