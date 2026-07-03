@@ -25,6 +25,7 @@ export default function StickyNav() {
         <ul className="nav-links">
           <li><a href="#experience" title="Jump to Experience section">{t('nav.experience')}</a></li>
           <li><a href="#projects" title="Jump to Projects section">{t('nav.projects')}</a></li>
+          <li><a href="#case-studies" title="Jump to Case Studies section">{t('nav.casestudies')}</a></li>
           <li><a href="#stack" title="Jump to Tech Stack section">{t('nav.stack')}</a></li>
           <li><a href="#awards" title="Jump to Awards section">{t('nav.awards')}</a></li>
         </ul>

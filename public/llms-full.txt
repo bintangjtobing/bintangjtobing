@@ -88,6 +88,25 @@ Customized warehouse and production management application for manufacturing ope
 ### Kareya Interior Digital Strategy
 SEO-focused content marketing and lead generation systems for premium villa developments. Delivered 250% website traffic increase and 180% growth in qualified leads.
 
+## Case Studies
+In-depth write-ups of products built and shipped, at https://bintangtobing.com/case-study
+
+### PMHelper — running a whole team from one tool
+https://bintangtobing.com/case-study/pmhelper
+Forked an abandoned open-source project and rebuilt it into a production project-management system: six database-driven roles, a QA-gated ticket pipeline with 15 statuses, auto-generated daily/weekly reports, an OKR/KPI module (objective weight x key-result weight x score), a React Native app (Expo, 37 REST endpoints), and a Claude MCP server (14 permission-checked tools). Five users depend on it daily at pm.cirrus-hub.net. Stack: Laravel 9, Filament v2, PHP 8.3, Livewire + Pusher, MySQL.
+
+### Bitunix MarTech Dashboard — running marketing from one screen
+https://bintangtobing.com/case-study/bitunix-martech-dashboard
+Replaced an hour of daily spreadsheet work with one dashboard that joins Google Search Console, GA4, and the Bitunix Partner Portal into a single conversion funnel (impression to first trade). Attributes deposits (not clicks) to campaigns, and cut brand-traffic dependence from 71% to 58% in a quarter. Daily sequential refresh at 02:00/02:30/03:00. Stack: Laravel 13, Next.js 16, PostgreSQL, Redis, BigQuery.
+
+### KlindrOS — three products on one marketing engine
+https://bintangtobing.com/case-study/klindros
+One data pipeline and one 0-100 KEI scoring framework power three products: Core (a Bloomberg-terminal-style platform for brand teams with multi-touch attribution, autonomous optimization, and an Organic Fatigue Index), KScore Business (a two-minute single-account sales scan), and KScore Personal (a three-minute personal-brand audit across six platforms with the Klaira AI strategist). Honest unit economics: ~$0.08 per personal scan, logged per event. Multi-tenant, Laravel 11 + Next.js 16 + Expo.
+
+### KlindrOS CRM — turning a stranger into a paying tenant
+https://bintangtobing.com/case-study/klindros-crm
+The sales engine behind the scans: a single-tenant Filament admin at /crm. Four lead doors (KScore Business, KScore Personal, Calendly, Ghost blog) into one workspace, two-way email over IMAP (reply polling every two minutes, header-based thread matching), Calendly webhook write-backs, a one-click Convert-to-Customer that provisions a live tenant, and a Ghost CMS blog wired in via HMAC-verified webhooks so content and sales share one engine. Stack: Laravel, Filament, IMAP, Calendly, Ghost Content/Admin API, GA4.
+
 ## Technical Skills
 - AI & Automation: Anthropic Claude API, OpenAI GPT-4o, MCP (Model Context Protocol), n8n Workflow Automation, Prompt Engineering, AI Pipeline Architecture
 - Programming: JavaScript, TypeScript, Python, PHP

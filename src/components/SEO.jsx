@@ -96,8 +96,14 @@ export default function SEO({
   path = '/',
   type = 'website',
   schemas = [personSchema, websiteSchema],
+  image,
+  imageAlt = 'Bintang Tobing - Marketing Technology & Full-Stack Developer',
+  keywords,
 }) {
   const canonicalUrl = `${SITE_URL}${path}`;
+  // Per-page image override (relative paths become absolute); defaults to the site OG image.
+  const ogImage = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : OG_IMAGE;
+  const isCustomImage = Boolean(image);
 
   return (
     <Helmet>
@@ -108,18 +114,18 @@ export default function SEO({
       <meta name="author" content="Bintang Tobing" />
       <meta name="publisher" content="Bintang Tobing" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="keywords" content="Bintang Tobing, Marketing Technology, Full-Stack Developer, AI Integration, Software Engineer, React.js, Node.js, Laravel, n8n, Anthropic Claude, OpenAI, MarTech" />
+      <meta name="keywords" content={keywords || 'Bintang Tobing, Marketing Technology, Full-Stack Developer, AI Integration, Software Engineer, React.js, Node.js, Laravel, n8n, Anthropic Claude, OpenAI, MarTech'} />
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={OG_IMAGE} />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="1200" />
-      <meta property="og:image:alt" content="Bintang Tobing - Marketing Technology & Full-Stack Developer" />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:type" content={isCustomImage ? 'image/jpeg' : 'image/jpeg'} />
+      {!isCustomImage && <meta property="og:image:width" content="1200" />}
+      {!isCustomImage && <meta property="og:image:height" content="1200" />}
+      <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:site_name" content="Bintang Tobing" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="id_ID" />
@@ -129,8 +135,8 @@ export default function SEO({
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={OG_IMAGE} />
-      <meta name="twitter:image:alt" content="Bintang Tobing - Marketing Technology & Full-Stack Developer" />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
 
       {/* Structured Data */}
       {schemas.map((schema, i) => (

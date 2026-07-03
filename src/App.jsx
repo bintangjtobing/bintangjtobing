@@ -4,6 +4,8 @@ import ParticleBackground from './components/ParticleBackground';
 import ChatWidget from './components/ChatWidget';
 import Home from './pages/Home';
 import Links from './pages/Links';
+import CaseStudyIndex from './pages/CaseStudyIndex';
+import CaseStudyDetail from './pages/CaseStudyDetail';
 
 export default function App() {
   return (
@@ -14,6 +16,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/links" element={<Links />} />
+          <Route path="/case-study" element={<CaseStudyIndex />} />
+          <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

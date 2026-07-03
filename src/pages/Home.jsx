@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import SEO from '../components/SEO';
 import Controls from '../components/Controls';
@@ -6,7 +7,8 @@ import StickyNav from '../components/StickyNav';
 import VerifiedBadge from '../components/VerifiedBadge';
 import CvDownload from '../components/CvDownload';
 import Reveal from '../components/Reveal';
-import { trackPageView, trackEvent, trackScrollDepth } from '../utils/tracking';
+import { caseStudies } from '../data/caseStudies';
+import { trackPageView, trackEvent, trackScrollDepth, trackCaseStudyOpen } from '../utils/tracking';
 import photo from '../assets/photo.webp';
 
 const experiences = [
@@ -236,6 +238,48 @@ export default function Home() {
         </Reveal>
       </section>
 
+      {/* CASE STUDIES */}
+      <div className="section-divider" />
+      <section className="section" id="case-studies">
+        <Reveal trackId="case-studies"><p className="section-label">{t('section.casestudies')}</p></Reveal>
+        <Reveal><p className="cs-home-intro">{t('cs.home.intro')}</p></Reveal>
+        <div className="cs-home-grid">
+          {caseStudies.map((c, i) => (
+            <Reveal key={c.slug} delay={i * 0.04}>
+              <Link
+                to={`/case-study/${c.slug}`}
+                className="cs-home-card"
+                title={c.title}
+                onClick={() => trackCaseStudyOpen(c.slug, 'home')}
+              >
+                <div className="cs-home-card-media">
+                  <img src={c.cardImage} alt={c.cardImageAlt} title={c.title} loading="lazy" />
+                </div>
+                <div className="cs-home-card-body">
+                  <span className="cs-home-card-cat">{c.category}</span>
+                  <h3 className="cs-home-card-title">{c.title}</h3>
+                  <p className="cs-home-card-desc">{c.cardDesc}</p>
+                  <div className="cs-home-card-tags">
+                    {c.cardTags.map((tag) => <span key={tag} className="cs-tag">{tag}</span>)}
+                  </div>
+                  <span className="cs-home-card-read">{t('cs.read')} <span aria-hidden="true">&rarr;</span></span>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal>
+          <Link
+            to="/case-study"
+            className="cs-home-viewall"
+            title="View all case studies"
+            onClick={() => trackEvent('click_case_studies_viewall', { location: 'home' })}
+          >
+            {t('cs.home.viewall')} <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </Reveal>
+      </section>
+
       {/* TECH STACK */}
       <div className="section-divider" />
       <section className="section" id="stack">
@@ -306,6 +350,7 @@ export default function Home() {
         <ul className="footer-nav">
           <li><a href="#experience" title="Experience section">{t('nav.experience')}</a></li>
           <li><a href="#projects" title="Projects section">{t('nav.projects')}</a></li>
+          <li><a href="#case-studies" title="Case Studies section">{t('nav.casestudies')}</a></li>
           <li><a href="#stack" title="Tech Stack section">{t('nav.stack')}</a></li>
           <li><a href="#awards" title="Awards section">{t('nav.awards')}</a></li>
           <li><a href="#certifications" title="Certifications section">{t('nav.certs')}</a></li>

@@ -27,7 +27,14 @@ Marketing and Technology Manager at Bitunix Fintech LLC, United Arab Emirates (F
 
 ## Pages
 - [Home](https://bintangtobing.com/): Full profile, experience, projects, tech stack, awards, certifications
+- [Case Studies](https://bintangtobing.com/case-study): In-depth write-ups of products built and shipped
 - [Links](https://bintangtobing.com/links): All social and professional links
+
+## Case Studies
+- [PMHelper](https://bintangtobing.com/case-study/pmhelper): A production project-management tool with role-based access, a QA-gated ticket pipeline, auto-generated reports, OKR/KPI tracking, a React Native app, and a Claude MCP server. Five users depend on it daily.
+- [Bitunix MarTech Dashboard](https://bintangtobing.com/case-study/bitunix-martech-dashboard): One dashboard joining Google Search Console, GA4, and the Bitunix Partner Portal into a single conversion funnel — attributing deposits to campaigns and cutting brand-traffic dependence from 71% to 58% in a quarter.
+- [KlindrOS](https://bintangtobing.com/case-study/klindros): Three products on one marketing engine — Core (a Bloomberg-terminal-style platform for brand teams), KScore Business (a sales-opening account scan), and KScore Personal (a three-minute personal-brand audit across six platforms).
+- [KlindrOS CRM](https://bintangtobing.com/case-study/klindros-crm): A Filament CRM that turns strangers into paying tenants — four lead doors, two-way IMAP email, Calendly write-backs, one-click convert-to-tenant, and a Ghost blog wired into the same sales engine.
 
 ## More Info
 - [Full details](https://bintangtobing.com/llms-full.txt)

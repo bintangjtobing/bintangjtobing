@@ -36,6 +36,7 @@ const linkGroups = [
     groupName: 'Professional',
     links: [
       { icon: '\uD83D\uDCBC', event: 'click_link_work_together', labelKey: 'link.work', fallbackLabel: 'Work Together', url: 'https://cirrus-hub.net/appointment?utm_source=bintangtobing-links&utm_medium=share-on-links', title: 'Schedule a meeting with Bintang Tobing', thumbnail: true, thumbSrc: thumbCirrus, thumbAlt: 'Cirrus Hub appointment page preview' },
+      { icon: '\uD83D\uDCC1', event: 'click_link_case_studies', labelKey: 'link.casestudies', fallbackLabel: 'Case Studies', url: '/case-study', external: false, title: 'Read Bintang Tobing case studies \u2014 PMHelper, Bitunix MarTech Dashboard, KlindrOS' },
       { icon: '\uD83D\uDCCA', event: 'click_link_kscore', labelKey: 'link.kscore', fallbackLabel: 'Audit 6 sosmed kamu dalam 2 menit', url: 'https://klindros.com/kscore/personal?utm_source=bintangtobing.com&utm_medium=referral&utm_campaign=kscore-personal&utm_content=links-page', title: 'Audit 6 sosmed kamu dalam 2 menit dengan kScore by KlindrOS' },
       { icon: 'in', event: 'click_link_linkedin', me: true, label: 'LinkedIn', url: 'https://linkedin.com/in/bintangtobing', title: 'Bintang Tobing on LinkedIn' },
       { icon: '\u270D', event: 'click_link_freelance', me: true, labelKey: 'link.freelance', fallbackLabel: 'Freelance Projects', url: 'https://www.upwork.com/freelancers/~01981e16848fe1eecf', title: 'Hire Bintang Tobing on Upwork' },
