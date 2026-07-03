@@ -69,9 +69,36 @@
       if(t)document.documentElement.setAttribute('data-theme',t);
     })();
   </script>
+
+  <!-- Structured data (static baseline so non-JS crawlers see it too) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Bintang Cato Jeremia L Tobing","alternateName":"Bintang Tobing","url":"https://bintangtobing.com","image":"https://bintangtobing.com/og-image.jpg?v=2","jobTitle":["Product Manager","Project Manager","Full-Stack Developer","Marketing Technology Manager"],"description":"Product & Project Manager and Full-Stack Developer based in Indonesia and the UAE, working across ASEAN and remotely worldwide. Specializing in MarTech, AI integration, and fintech.","email":"hello@bintangtobing.com","nationality":{"@type":"Country","name":"Indonesia"},"worksFor":{"@type":"Organization","name":"Bitunix Fintech LLC","url":"https://bitunix.com"},"sameAs":["https://linkedin.com/in/bintangtobing","https://github.com/bintangjtobing","https://instagram.com/bcjlt","https://www.tiktok.com/@tatangkatanyaa","https://press.bintangtobing.com","https://www.upwork.com/freelancers/~01981e16848fe1eecf"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Bintang Tobing","url":"https://bintangtobing.com","description":"Personal website of Bintang Tobing, Product & Project Manager and Full-Stack Developer based in Indonesia, UAE, and remote worldwide.","author":{"@type":"Person","name":"Bintang Tobing"},"inLanguage":["en","id"]}
+  </script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static SEO fallback: real content for non-JS crawlers. React replaces
+         this on mount, so JS visitors never see it. Gives crawlers an h1,
+         meaningful text, and internal links even without executing JavaScript. -->
+    <main style="max-width:720px;margin:0 auto;padding:6rem 2rem;font-family:'DM Sans',system-ui,sans-serif;line-height:1.7">
+      <h1 style="font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:2rem;font-weight:800;letter-spacing:-0.03em">Bintang Tobing</h1>
+      <p style="font-weight:600;margin-top:0.5rem">Product &amp; Project Manager · Full-Stack Developer · AI Integration Specialist</p>
+      <p style="margin-top:1.2rem">Product &amp; Project Manager and Full-Stack Developer: 8+ years leading products and teams (since 2018), built on 10+ years shipping production systems as a developer (since 2016). Experience across fintech, MarTech, ERP, and government. Based between Indonesia and the UAE, delivering across ASEAN and remotely worldwide. Recent work includes KlindrOS (a 26-module MarTech intelligence platform with a 1.55B events/day pipeline), the Bitunix MarTech Dashboard, and PMHelper with a self-built Claude-compatible MCP server.</p>
+      <nav style="margin-top:1.5rem" aria-label="Sections">
+        <p><strong>Case studies:</strong>
+          <a href="/case-study">All case studies</a> ·
+          <a href="/case-study/pmhelper">PMHelper</a> ·
+          <a href="/case-study/bitunix-martech-dashboard">Bitunix MarTech Dashboard</a> ·
+          <a href="/case-study/klindros">KlindrOS</a> ·
+          <a href="/case-study/klindros-crm">KlindrOS CRM</a>
+        </p>
+        <p><a href="/links">All links</a></p>
+      </nav>
+    </main>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
