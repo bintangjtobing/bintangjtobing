@@ -76,11 +76,13 @@ const awards = [
 ];
 
 const certs = [
-  { name: 'IBM IT Project Manager Specialization', org: 'IBM & SkillUp EdTech', year: '2025' },
-  { name: 'Google Project Management Professional Certificate', org: 'Google', year: '2024' },
-  { name: 'ASEAN Data Science Explorers', org: 'SAP Analytics Cloud, ASEAN Foundation', year: '2024' },
+  { name: 'Google Data Analytics Professional Certificate', org: 'Google', year: '2026', url: 'https://coursera.org/verify/professional-cert/WV0MOQW5LC5P' },
+  { name: 'Supply Chain Management and Analytics', org: 'Unilever', year: '2026', url: 'https://www.coursera.org/account/accomplishments/verify/QE4M44E58B21' },
+  { name: 'IBM IT Project Manager Specialization', org: 'IBM & SkillUp EdTech', year: '2025', url: 'https://www.coursera.org/account/accomplishments/specialization/OW33Y1QVQ9VO' },
+  { name: 'Google Project Management Professional Certificate', org: 'Google', year: '2024', url: 'https://www.coursera.org/account/accomplishments/specialization/3VULLFKJCR9Q' },
+  { name: 'ASEAN Data Science Explorers', org: 'SAP Analytics Cloud, ASEAN Foundation', year: '2024', credId: 'No. 074/SERT/24-DSI-04/IV/2024' },
   { name: 'Cyber Security Certification', org: 'habiskerja.com', year: '2022' },
-  { name: 'Front-end Web Development Quantum Degree', org: 'Next Academy, Kuala Lumpur', year: '2019' },
+  { name: 'Front-end Web Development Quantum Degree', org: 'Next Academy, Kuala Lumpur', year: '2019', credId: '8-b607091d-72c1-4a40-ad96-74187180d53d' },
 ];
 
 const heroLinks = [
@@ -272,7 +274,22 @@ export default function Home() {
           {certs.map((c, i) => (
             <Reveal key={i}>
               <li className="cert-item">
-                <span className="cert-name"><strong>{c.name}</strong> · {c.org}</span>
+                <span className="cert-name">
+                  <span className="cert-title"><strong>{c.name}</strong> · {c.org}</span>
+                  {c.url && (
+                    <a
+                      className="cert-verify"
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={`Verify ${c.name} credential`}
+                      onClick={() => trackEvent('click_cert_verify', { link_url: c.url, location: 'certifications', cert: c.name })}
+                    >
+                      Verify credential ↗
+                    </a>
+                  )}
+                  {c.credId && <span className="cert-cred">Credential ID: {c.credId}</span>}
+                </span>
                 <span className="cert-year">{c.year}</span>
               </li>
             </Reveal>

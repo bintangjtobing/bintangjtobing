@@ -897,6 +897,9 @@ nav .nav-links a:hover { color: var(--fg); }
 .cert-item:last-child { border-bottom: none; padding-bottom: 0; }
 
 .cert-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -906,6 +909,29 @@ nav .nav-links a:hover { color: var(--fg); }
   font-family: var(--heading);
   font-weight: 600;
   color: var(--fg);
+}
+
+.cert-verify {
+  align-self: flex-start;
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+.cert-verify:hover {
+  color: var(--fg);
+  text-decoration-color: var(--fg);
+}
+
+.cert-cred {
+  font-size: 0.76rem;
+  color: var(--light);
+  letter-spacing: 0.01em;
 }
 
 .cert-year {
