@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
-import ParticleBackground from './components/ParticleBackground';
+import RippleBackground from './components/RippleBackground';
 import ChatWidget from './components/ChatWidget';
 import Home from './pages/Home';
 import Links from './pages/Links';
@@ -10,7 +10,7 @@ import CaseStudyDetail from './pages/CaseStudyDetail';
 export default function App() {
   return (
     <AppProvider>
-      <ParticleBackground />
+      <RippleBackground />
       <ChatWidget />
       <BrowserRouter>
         <Routes>

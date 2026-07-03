@@ -41,6 +41,10 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* clip (not hidden): stops stray horizontal overflow WITHOUT turning the
+     element into a scroll container, so no extra scrollbar appears on the right
+     and position: sticky keeps working. */
+  overflow-x: clip;
 }
 
 body {
@@ -49,7 +53,7 @@ body {
   font-family: var(--body);
   font-weight: 300;
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background 0.35s ease, color 0.35s ease;
 }
 

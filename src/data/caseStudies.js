@@ -41,7 +41,7 @@ export const caseStudies = [
       title: 'PMHelper — OKR & KPI tracking (My OKR)',
     },
     seo: {
-      title: 'PMHelper Case Study — A Production PM Tool with QA Gates, OKR & an MCP Server | Bintang Tobing',
+      title: 'PMHelper Case Study — QA-Gated PM Tool | Bintang Tobing',
       description: 'How I forked an abandoned open-source project and rebuilt it into PMHelper: a production project-management system with role-based access, a QA-gated ticket pipeline, auto-generated reports, OKR/KPI tracking, a React Native app, and a Claude MCP server. Five users depend on it daily.',
       keywords: 'PMHelper, project management tool, Laravel, Filament, QA workflow, OKR KPI, MCP server, Claude, React Native, Bintang Tobing case study',
     },
@@ -140,7 +140,7 @@ export const caseStudies = [
       title: 'Bitunix MarTech Dashboard — marketing intelligence overview',
     },
     seo: {
-      title: 'Bitunix MarTech Dashboard Case Study — One Screen for Search, Analytics & Partner Data | Bintang Tobing',
+      title: 'Bitunix MarTech Dashboard Case Study | Bintang Tobing',
       description: 'How I replaced an hour of daily spreadsheet work with one dashboard that joins Google Search Console, GA4, and the Bitunix Partner Portal into a single conversion funnel — attributing deposits to campaigns and cutting brand-traffic dependence from 71% to 58% in a quarter.',
       keywords: 'Bitunix, MarTech dashboard, Google Search Console, GA4, BigQuery, attribution, conversion funnel, Laravel, Next.js, Bintang Tobing case study',
     },
@@ -217,7 +217,7 @@ export const caseStudies = [
       title: 'KlindrOS Core — the ROI attribution engine',
     },
     seo: {
-      title: 'KlindrOS Case Study — Marketing Intelligence Across Core, KScore Business & KScore Personal | Bintang Tobing',
+      title: 'KlindrOS Marketing Platform Case Study | Bintang Tobing',
       description: 'How KlindrOS ships three products on one engine: Core (a Bloomberg-terminal-style platform for brand teams), KScore Business (a sales-opening account scan), and KScore Personal (a three-minute personal-brand audit across six platforms). Real use cases from agencies, growth leads, creators, and job seekers.',
       keywords: 'KlindrOS, KScore, marketing intelligence, multi-touch attribution, KEI score, MarTech platform, personal brand audit, multi-tenant, GPT-4o, Bintang Tobing case study',
     },
@@ -298,7 +298,7 @@ caseStudies.push({
     title: 'KlindrOS CRM — the acquisition dashboard',
   },
   seo: {
-    title: 'KlindrOS CRM Case Study — From Scan to Signed Tenant, with the Ghost Blog Joined to Sales | Bintang Tobing',
+    title: 'KlindrOS CRM Case Study — Scan to Tenant | Bintang Tobing',
     description: 'How I built the KlindrOS CRM: a Filament admin that turns strangers into paying customers — four lead doors, two-way IMAP email, Calendly write-backs, a one-click convert-to-tenant, and a Ghost blog wired straight into the same sales engine.',
     keywords: 'KlindrOS CRM, Filament CRM, Laravel, two-way email IMAP, Calendly webhook, Ghost CMS integration, lead pipeline, sales automation, KScore, Bintang Tobing case study',
   },
