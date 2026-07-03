@@ -61,8 +61,10 @@ const stackGroups = [
   { label: 'Frontend', tags: ['React.js', 'Next.js', 'Vue.js', 'React Native', 'Expo', 'Flutter', 'TailwindCSS', 'shadcn/ui', 'Alpine.js'] },
   { label: 'Backend', tags: ['Node.js', 'Laravel', 'Filament', 'Livewire', 'REST API', 'GraphQL'] },
   { labelKey: 'stack.db', tags: ['PostgreSQL', 'MySQL', 'SQL Server', 'MongoDB', 'Redis'] },
+  { label: 'Data & Analytics', tags: ['Data Analysis', 'Tableau', 'R', 'Data Visualization', 'Data Storytelling', 'Data Cleaning'] },
   { labelKey: 'stack.realtime', tags: ['Pusher Channels', 'Jitsi Meet (self-hosted)', 'Laravel Horizon', 'BigQuery'] },
   { labelKey: 'stack.martech', tags: ['Google Analytics 4', 'Meta Business Suite', 'TikTok Ads', 'Twitter Ads', 'CRM', 'UTM Tracking', 'A/B Testing', 'CRO'] },
+  { label: 'Project Management', tags: ['Agile', 'Scrum', 'Sprint Planning', 'Backlog Management', 'Risk Management', 'Stakeholder Management', 'SDLC'] },
   { labelKey: 'stack.devops', tags: ['Git', 'GitHub', 'Docker', 'CI/CD', 'Nginx', 'PM2', 'Let’s Encrypt', 'fail2ban', 'Server Administration'] },
   { labelKey: 'stack.tools', tags: ['Vite', 'WordPress', 'Figma', 'Photoshop', 'Chrome Extension API'] },
 ];

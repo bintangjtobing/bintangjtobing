@@ -94,8 +94,10 @@ SEO-focused content marketing and lead generation systems for premium villa deve
 - Frontend: React.js, Next.js, Vue.js, React Native, Expo, Flutter, TailwindCSS, shadcn/ui, Alpine.js
 - Backend: Node.js, Laravel, Filament, Livewire, REST API, GraphQL
 - Databases: PostgreSQL, MySQL, SQL Server, MongoDB, Redis
+- Data & Analytics: Data Analysis, Tableau, R, Data Visualization, Data Storytelling, Data Cleaning
 - Real-Time & Data: Pusher Channels, Jitsi Meet (self-hosted), Laravel Horizon, BigQuery
 - Marketing Technology: Google Analytics 4, Meta Business Suite, TikTok Ads, Twitter Ads, CRM, UTM Tracking, A/B Testing, Conversion Rate Optimization
+- Project Management: Agile, Scrum, Sprint Planning, Backlog Management, Risk Management, Stakeholder Management, Software Development Life Cycle (SDLC)
 - DevOps & Infrastructure: Git, GitHub, Docker, CI/CD, Nginx, PM2, Let's Encrypt, fail2ban, Server Administration
 - Tools: Vite, WordPress, Figma, Photoshop, Chrome Extension API
 
